@@ -48,9 +48,6 @@
    FONT FACES
    ═══════════════════════════════════════════ */
 
-/* PP Mori — Display font
-   Place font files in /public/fonts/
-   Supported: .woff2 preferred */
 @font-face {
   font-family: "PP Mori";
   src: url("/fonts/PPMori-Semibold.woff2") format("woff2");
@@ -67,7 +64,6 @@
   font-display: swap;
 }
 
-/* PP Neue Montreal — Body font */
 @font-face {
   font-family: "PP Neue Montreal";
   src: url("/fonts/PPNeueMontreal-Regular.woff2") format("woff2");
@@ -92,8 +88,6 @@
   font-display: swap;
 }
 
-/* JetBrains Mono — from Google Fonts CDN, loaded in HTML */
-
 /* ═══════════════════════════════════════════
    BASE STYLES
    ═══════════════════════════════════════════ */
@@ -114,7 +108,6 @@ body {
   background-color: var(--color-sage-wash);
 }
 
-/* Hide all heroes by default to prevent flash */
 .hero-variant {
   display: none;
 }
@@ -123,7 +116,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════
-   TYPOGRAPHY UTILITIES
+   TYPOGRAPHY
    ═══════════════════════════════════════════ */
 
 .type-display {
@@ -241,6 +234,51 @@ body {
 }
 
 /* ═══════════════════════════════════════════
+   TOP NAV — Always visible
+   ═══════════════════════════════════════════ */
+
+.top-nav {
+  position: relative;
+  z-index: 50;
+  background-color: var(--color-sage-wash);
+  border-bottom: 1px solid rgba(28, 24, 20, 0.06);
+}
+
+.nav-link {
+  color: var(--color-warm-mid);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-forest);
+}
+
+/* ═══════════════════════════════════════════
+   STICKY NAV — appears on scroll
+   ═══════════════════════════════════════════ */
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(244, 246, 243, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(28, 24, 20, 0.08);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sticky-nav.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════════
    BUTTONS
    ═══════════════════════════════════════════ */
 
@@ -278,7 +316,134 @@ body {
 }
 
 /* ═══════════════════════════════════════════
-   CARDS — Flat design with solid border
+   OVERLINE BADGE — Animated "Agentic Engineering Platform"
+   ═══════════════════════════════════════════ */
+
+.overline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  background: rgba(0, 119, 69, 0.08);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(0, 119, 69, 0.2);
+  animation: badge-pulse 3s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { border-color: rgba(0, 119, 69, 0.2); }
+  50% { border-color: rgba(0, 119, 69, 0.5); }
+}
+
+/* ═══════════════════════════════════════════
+   HERO PROCESS FLOW (Variant C)
+   ═══════════════════════════════════════════ */
+
+.process-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.process-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: step-appear 0.4s ease forwards;
+  animation-delay: var(--step-delay, 0s);
+}
+
+.process-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-sage-surface);
+  border: 2px solid var(--color-cool-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-warm-mid);
+  flex-shrink: 0;
+}
+
+.process-num--final {
+  background: var(--color-forest);
+  border-color: var(--color-forest);
+  color: white;
+}
+
+.process-arrow {
+  color: var(--color-cool-light);
+  font-size: 14px;
+  opacity: 0;
+  animation: step-appear 0.3s ease forwards;
+  animation-delay: var(--step-delay, 0s);
+}
+
+.process-flow .process-step:nth-child(3) ~ .process-arrow { animation-delay: 0.4s; }
+.process-flow .process-step:nth-child(5) ~ .process-arrow { animation-delay: 0.7s; }
+.process-flow .process-step:nth-child(7) ~ .process-arrow { animation-delay: 1.0s; }
+
+@keyframes step-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .process-flow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .process-arrow {
+    display: none;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   STRIKETHROUGH ANIMATION (Variant C)
+   ═══════════════════════════════════════════ */
+
+.strike-through {
+  position: relative;
+  display: inline-block;
+}
+
+.strike-through::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: 52%;
+  height: 4px;
+  background-color: var(--color-signal-red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 2px;
+}
+
+.strike-through.animate::after {
+  transform: scaleX(1);
+}
+
+/* ═══════════════════════════════════════════
+   CARDS
    ═══════════════════════════════════════════ */
 
 .card {
@@ -288,35 +453,181 @@ body {
   padding: 24px;
 }
 
-.card-warm {
+.card-icon-area {
+  width: 48px;
+  height: 48px;
+}
+
+/* ═══════════════════════════════════════════
+   IMAGE PLACEHOLDERS
+   ═══════════════════════════════════════════ */
+
+.image-placeholder {
+  border: 2px dashed var(--color-cool-light);
+  border-radius: var(--radius-container);
+  background: var(--color-sage-surface);
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder-sm {
+  width: 48px;
+  height: 48px;
+  border: 2px dashed var(--color-cool-light);
+  border-radius: var(--radius-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-sage-wash);
+}
+
+.image-placeholder-dark {
+  border: 2px dashed var(--color-elevated);
+  border-radius: var(--radius-container);
+  background: var(--color-elevated);
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ═══════════════════════════════════════════
+   HOW IT WORKS — AI Layer Badge
+   ═══════════════════════════════════════════ */
+
+.ai-layer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  background: rgba(0, 119, 69, 0.08);
+  border: 2px solid var(--color-forest);
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  animation: ai-badge-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes ai-badge-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 119, 69, 0); }
+  50% { box-shadow: 0 0 12px 2px rgba(0, 119, 69, 0.15); }
+}
+
+/* AI vs Human layer visual treatment */
+.layer-ai {
+  border-left: 3px solid var(--color-cool-light);
+}
+
+.layer-human {
+  border-left: 3px solid var(--color-forest);
+  background: linear-gradient(135deg, rgba(0, 119, 69, 0.04), transparent);
+}
+
+/* ═══════════════════════════════════════════
+   HUMAN DIVIDER — "Then humans step in"
+   ═══════════════════════════════════════════ */
+
+.human-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.human-divider-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.025em;
+  color: var(--color-forest);
+  background: rgba(0, 119, 69, 0.08);
+  border: 2px solid var(--color-forest);
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  animation: human-pulse 2s ease-in-out infinite;
+}
+
+@keyframes human-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* ═══════════════════════════════════════════
+   TIER CARDS
+   ═══════════════════════════════════════════ */
+
+.tier-card {
   background: var(--color-sage-wash);
   border: 4px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   padding: 24px;
 }
 
-/* ═══════════════════════════════════════════
-   STICKY NAV
-   ═══════════════════════════════════════════ */
-
-.sticky-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background-color: rgba(244, 246, 243, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(28, 24, 20, 0.08);
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.tier-card-featured {
+  background: var(--color-warm-black);
+  color: var(--color-off-white);
+  border-color: var(--color-warm-black);
 }
 
-.sticky-nav.visible {
-  transform: translateY(0);
-  opacity: 1;
+/* ═══════════════════════════════════════════
+   WHO THIS IS FOR — Dark cards
+   ═══════════════════════════════════════════ */
+
+.who-card {
+  background: var(--color-elevated);
+  border: 4px solid var(--color-elevated);
+  border-radius: var(--radius-card);
+  padding: 24px;
+}
+
+/* ═══════════════════════════════════════════
+   COMPARISON TABLE
+   ═══════════════════════════════════════════ */
+
+.comparison-col-highlight {
+  background-color: rgba(0, 119, 69, 0.05);
+}
+
+.comparison-highlight {
+  background-color: rgba(0, 119, 69, 0.06);
+  border: 3px solid var(--color-forest);
+  border-radius: var(--radius-card);
+  position: relative;
+}
+
+/* ═══════════════════════════════════════════
+   PRICE DISPLAY
+   ═══════════════════════════════════════════ */
+
+.price-amount {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-warm-black);
+}
+
+.price-period {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--color-stone);
+}
+
+@media (max-width: 767px) {
+  .price-amount {
+    font-size: 48px;
+  }
 }
 
 /* ═══════════════════════════════════════════
@@ -332,7 +643,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 24px 0;
+  padding: 20px 0;
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 18px;
@@ -369,151 +680,20 @@ body {
 
 .faq-item.open .faq-answer {
   max-height: 500px;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 }
 
 /* ═══════════════════════════════════════════
-   STRIKETHROUGH ANIMATION (Variant C)
-   ═══════════════════════════════════════════ */
-
-.strike-through {
-  position: relative;
-  display: inline-block;
-}
-
-.strike-through::after {
-  content: "";
-  position: absolute;
-  left: -4px;
-  right: -4px;
-  top: 52%;
-  height: 4px;
-  background-color: var(--color-signal-red);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  border-radius: 2px;
-}
-
-.strike-through.animate::after {
-  transform: scaleX(1);
-}
-
-/* ═══════════════════════════════════════════
-   SCROLL FADE-IN ANIMATION
+   SCROLL FADE-IN
    ═══════════════════════════════════════════ */
 
 .fade-in-section {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* ═══════════════════════════════════════════
-   HOW IT WORKS — Step connector
-   ═══════════════════════════════════════════ */
-
-.step-connector {
-  width: 2px;
-  background: var(--color-cool-light);
-  flex-shrink: 0;
-}
-
-.step-connector-human {
-  background: var(--color-forest);
-}
-
-/* AI vs Human layer visual treatment */
-.layer-ai {
-  border-left: 3px solid var(--color-cool-light);
-}
-
-.layer-human {
-  border-left: 3px solid var(--color-forest);
-  background: linear-gradient(135deg, rgba(0, 119, 69, 0.03), transparent);
-}
-
-/* ═══════════════════════════════════════════
-   COMPARISON TABLE
-   ═══════════════════════════════════════════ */
-
-.comparison-highlight {
-  background-color: rgba(0, 119, 69, 0.06);
-  border: 3px solid var(--color-forest);
-  border-radius: var(--radius-card);
-  position: relative;
-}
-
-/* ═══════════════════════════════════════════
-   DEVELOPER ASSIST SECTION — warm background
-   ═══════════════════════════════════════════ */
-
-.section-warm-bg {
-  background-color: #f0ede8;
-}
-
-/* ═══════════════════════════════════════════
-   MID-PAGE CTA BAR
-   ═══════════════════════════════════════════ */
-
-.cta-bar {
-  background: var(--color-warm-black);
-  color: white;
-}
-
-.cta-bar .btn-primary {
-  background-color: white;
-  color: var(--color-warm-black);
-}
-
-.cta-bar .btn-primary:hover {
-  background-color: var(--color-off-white);
-}
-
-/* ═══════════════════════════════════════════
-   TIER CARDS
-   ═══════════════════════════════════════════ */
-
-.tier-card {
-  background: var(--color-sage-wash);
-  border: 4px solid var(--color-warm-black);
-  border-radius: var(--radius-card);
-  padding: 32px 24px;
-}
-
-.tier-card-featured {
-  background: var(--color-warm-black);
-  color: var(--color-off-white);
-  border-color: var(--color-warm-black);
-}
-
-/* ═══════════════════════════════════════════
-   PRICE DISPLAY
-   ═══════════════════════════════════════════ */
-
-.price-amount {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 64px;
-  line-height: 1;
-  letter-spacing: -0.05em;
-  color: var(--color-warm-black);
-}
-
-.price-period {
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 24px;
-  color: var(--color-stone);
-}
-
-@media (max-width: 767px) {
-  .price-amount {
-    font-size: 48px;
-  }
 }

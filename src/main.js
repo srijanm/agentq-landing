@@ -72,10 +72,15 @@ function initFaq() {
     question.addEventListener("click", () => {
       const isOpen = item.classList.contains("open");
       // Close all others
-      items.forEach((i) => i.classList.remove("open"));
+      items.forEach((i) => {
+        i.classList.remove("open");
+        const btn = i.querySelector(".faq-question");
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
       // Toggle current
       if (!isOpen) {
         item.classList.add("open");
+        question.setAttribute("aria-expanded", "true");
       }
     });
   });
