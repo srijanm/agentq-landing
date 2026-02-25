@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgentQ — Production-Ready Software, Launched in Days</title>
+  <meta name="description" content="Agentic engineering with on-demand developer assistance. AI agents build your software. Human developers make sure it works. Production-ready code you own.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-sage-wash text-warm-black">
+
+  <!-- ═══════════════════════════════════════════
+       STICKY NAV
+       ═══════════════════════════════════════════ -->
+  <nav id="sticky-nav" class="sticky-nav" aria-label="Primary navigation">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
+      <a href="https://agentq.dev/" class="logo text-2xl" aria-label="AgentQ home">
+        Agent<span class="logo-q">Q</span>
+      </a>
+      <a href="https://agentq.dev/" class="btn-primary btn-nav">
+        Start building <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION — 4 Variants
+       All hidden by default. JS shows the correct one.
+       ═══════════════════════════════════════════ -->
+  <section aria-label="Hero">
+
+    <!-- VARIANT A — Pain / Technical Failure -->
+    <div id="hero-a" class="hero-variant">
+      <div class="min-h-[100svh] flex items-center">
+        <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 w-full">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p class="type-overline text-forest mb-4">Agentic Engineering Platform</p>
+              <h1 class="type-display text-warm-black mb-6">Vibecoding made starting easy. Finishing is still hard.</h1>
+              <p class="type-body-lg text-warm-mid mb-10 max-w-xl">Your app looks great. The signup doesn't work. Payments fail at 2&nbsp;AM. The code is spaghetti nobody can debug. You've burned through credits and you still can't launch.</p>
+              <a href="https://agentq.dev/" class="btn-primary text-lg">
+                Start shipping <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center justify-center" aria-hidden="true">
+              <div class="w-full max-w-md aspect-[4/3] rounded-container border-4 border-warm-black bg-sage-surface flex items-center justify-center p-8">
+                <div class="w-full space-y-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full bg-signal-red"></div>
+                    <div class="w-3 h-3 rounded-full bg-warm-gold"></div>
+                    <div class="w-3 h-3 rounded-full bg-forest"></div>
+                  </div>
+                  <div class="space-y-3 font-mono text-sm text-warm-mid">
+                    <div class="flex items-center gap-2">
+                      <span class="text-forest">✓</span>
+                      <span>UI components rendered</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-forest">✓</span>
+                      <span>Database connected</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-signal-red">✗</span>
+                      <span class="text-signal-red">Auth flow — signup fails silently</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-signal-red">✗</span>
+                      <span class="text-signal-red">Payment webhook — unhandled error</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-warm-gold">⚠</span>
+                      <span class="text-warm-gold">No rate limiting configured</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-warm-gold">⚠</span>
+                      <span class="text-warm-gold">0 tests passing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VARIANT B — Pain / On-Demand Dev Assist -->
+    <div id="hero-b" class="hero-variant">
+      <div class="min-h-[100svh] flex items-center">
+        <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 w-full">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p class="type-overline text-forest mb-4">Agentic Engineering Platform</p>
+              <h1 class="type-display text-warm-black mb-6">AI builds your app. Real developers make sure it&nbsp;works.</h1>
+              <p class="type-body-lg text-warm-mid mb-10 max-w-xl">The worst moment in vibecoding is when something breaks and there's nobody to call. AgentQ includes on-demand developer assistance&nbsp;— real engineers in your workflow, not a chatbot. When AI gets stuck, we&nbsp;don't.</p>
+              <a href="https://agentq.dev/" class="btn-primary text-lg">
+                Build with a team behind you <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center justify-center" aria-hidden="true">
+              <div class="w-full max-w-md aspect-[4/3] rounded-container border-4 border-warm-black bg-sage-surface flex items-center justify-center p-8">
+                <div class="w-full space-y-5">
+                  <div class="flex items-center gap-3 text-sm font-mono text-warm-mid">
+                    <div class="w-8 h-8 rounded-full bg-cool-light flex items-center justify-center text-xs font-bold text-warm-black">AI</div>
+                    <span>Integration error on Stripe webhook...</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-sm font-mono text-warm-mid">
+                    <div class="w-8 h-8 rounded-full bg-cool-light flex items-center justify-center text-xs font-bold text-warm-black">AI</div>
+                    <span>Retrying... still failing. Escalating.</span>
+                  </div>
+                  <div class="border-t-2 border-dashed border-forest my-4"></div>
+                  <div class="flex items-center gap-3 text-sm font-mono">
+                    <div class="w-8 h-8 rounded-full bg-forest flex items-center justify-center text-xs font-bold text-white">Dev</div>
+                    <span class="text-forest font-medium">Found it. Webhook signature mismatch. Fixing now.</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-sm font-mono">
+                    <div class="w-8 h-8 rounded-full bg-forest flex items-center justify-center text-xs font-bold text-white">Dev</div>
+                    <span class="text-forest font-medium">Fixed and deployed. Added test coverage. ✓</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VARIANT C — Positive / Momentum (Default) -->
+    <div id="hero-c" class="hero-variant">
+      <div class="min-h-[100svh] flex items-center">
+        <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 w-full">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p class="type-overline text-forest mb-4">Agentic Engineering Platform</p>
+              <h1 class="type-display text-warm-black mb-6">It's time to <span class="strike-through">build</span> ship.</h1>
+              <p class="type-body-lg text-warm-mid mb-10 max-w-xl">Production-ready software, launched in days, not months. Describe your product. Our AI agents build it. Real developers make sure it works. You ship&nbsp;it.</p>
+              <a href="https://agentq.dev/" class="btn-primary text-lg">
+                Start shipping <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center justify-center" aria-hidden="true">
+              <div class="w-full max-w-md aspect-[4/3] rounded-container border-4 border-warm-black bg-sage-surface flex items-center justify-center p-8">
+                <div class="w-full space-y-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full bg-forest"></div>
+                    <div class="w-3 h-3 rounded-full bg-forest"></div>
+                    <div class="w-3 h-3 rounded-full bg-forest"></div>
+                  </div>
+                  <div class="space-y-3 font-mono text-sm">
+                    <div class="text-stone">$ agentq deploy --production</div>
+                    <div class="text-warm-mid">
+                      <span class="text-forest">✓</span> Database provisioned (PostgreSQL)
+                    </div>
+                    <div class="text-warm-mid">
+                      <span class="text-forest">✓</span> Security audit passed
+                    </div>
+                    <div class="text-warm-mid">
+                      <span class="text-forest">✓</span> Code review complete
+                    </div>
+                    <div class="text-warm-mid">
+                      <span class="text-forest">✓</span> Auth & RBAC configured
+                    </div>
+                    <div class="text-warm-mid">
+                      <span class="text-forest">✓</span> Deployed to production
+                    </div>
+                    <div class="mt-2 text-forest font-medium">
+                      → Your app is live. Ship it.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VARIANT D — Positive / Partnership -->
+    <div id="hero-d" class="hero-variant">
+      <div class="min-h-[100svh] flex items-center">
+        <div class="max-w-[1280px] mx-auto px-6 md:px-12 py-16 w-full">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p class="type-overline text-forest mb-4">Agentic Engineering Platform</p>
+              <h1 class="type-display text-warm-black mb-6">Your dev team in a&nbsp;box.</h1>
+              <p class="type-body-lg text-warm-mid mb-10 max-w-xl">Agentic engineering with on-demand developer assistance. AI agents build your software. Human developers make sure it works. Production-ready code you&nbsp;own.</p>
+              <a href="https://agentq.dev/" class="btn-primary text-lg">
+                Start building something real <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="hidden lg:flex items-center justify-center" aria-hidden="true">
+              <div class="w-full max-w-md aspect-[4/3] rounded-container border-4 border-warm-black bg-sage-surface flex items-center justify-center p-8">
+                <div class="w-full space-y-4">
+                  <div class="type-overline text-stone mb-3">Your Team</div>
+                  <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-sage-wash rounded-button p-3 text-center">
+                      <div class="text-xs font-mono text-stone">Agent</div>
+                      <div class="type-body-sm font-medium mt-1">Project Manager</div>
+                    </div>
+                    <div class="bg-sage-wash rounded-button p-3 text-center">
+                      <div class="text-xs font-mono text-stone">Agent</div>
+                      <div class="type-body-sm font-medium mt-1">Backend Dev</div>
+                    </div>
+                    <div class="bg-sage-wash rounded-button p-3 text-center">
+                      <div class="text-xs font-mono text-stone">Agent</div>
+                      <div class="type-body-sm font-medium mt-1">Frontend Dev</div>
+                    </div>
+                    <div class="bg-sage-wash rounded-button p-3 text-center">
+                      <div class="text-xs font-mono text-stone">Agent</div>
+                      <div class="type-body-sm font-medium mt-1">Code Auditor</div>
+                    </div>
+                  </div>
+                  <div class="border-t-2 border-dashed border-forest pt-3">
+                    <div class="bg-forest/10 rounded-button p-3 text-center">
+                      <div class="text-xs font-mono text-forest">On-Demand</div>
+                      <div class="type-body-sm font-medium text-forest mt-1">Developer Assist</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: THE PROBLEM
+       ═══════════════════════════════════════════ -->
+  <section id="problem" class="py-5xl md:py-6xl fade-in-section" aria-labelledby="problem-heading">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <h2 id="problem-heading" class="type-h2 text-warm-black mb-12 md:mb-16 max-w-2xl">You built the app. But it's not ready to&nbsp;ship.</h2>
+
+      <div class="grid sm:grid-cols-2 gap-4 md:gap-5">
+        <!-- Pain Card 1 -->
+        <div class="card">
+          <h3 class="type-h4 mb-3">Built, but not production-grade.</h3>
+          <p class="type-body text-warm-mid">Your app works in the demo. It breaks with real users. Auth has gaps. Payments fail silently. The database buckles under load. You built something&nbsp;— but it's not production-ready, and you can't launch it like&nbsp;this.</p>
+        </div>
+
+        <!-- Pain Card 2 -->
+        <div class="card">
+          <h3 class="type-h4 mb-3">Unsecure code. Toy databases. No&nbsp;architecture.</h3>
+          <p class="type-body text-warm-mid">The AI gave you a shared SQLite instance and called it a backend. No role-based access. No input validation. No encryption. The security is an afterthought&nbsp;— if it's a thought at&nbsp;all.</p>
+        </div>
+
+        <!-- Pain Card 3 -->
+        <div class="card">
+          <h3 class="type-h4 mb-3">Code nobody can read, debug, or hand&nbsp;off.</h3>
+          <p class="type-body text-warm-mid">The AI wrote thousands of lines with no structure and no documentation. When something breaks, you can't find the problem. When you bring in a developer, they want to start over. The code is a black box you're trapped&nbsp;inside.</p>
+        </div>
+
+        <!-- Pain Card 4 -->
+        <div class="card">
+          <h3 class="type-h4 mb-3">Credits gone. No one to&nbsp;call.</h3>
+          <p class="type-body text-warm-mid">Every fix creates a new bug. Every new bug burns more credits. The AI loops on the same error. There's no support team. No developer on call. Just you, a broken app, and a credit counter ticking&nbsp;down.</p>
+        </div>
+      </div>
+
+      <!-- Transition line -->
+      <div class="mt-16 md:mt-20 max-w-3xl mx-auto text-center">
+        <p class="type-body-lg text-warm-black leading-relaxed">What vibecoding got right: the speed, the simplicity, the ability to describe an idea and watch it come to life. What it got wrong: <em>everything after that.</em></p>
+        <p class="type-h3 text-forest mt-6">AgentQ is white-glove vibecoding&nbsp;— agentic engineering with on-demand developer assistance, so what you build actually&nbsp;ships.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: HOW AGENTQ WORKS
+       ═══════════════════════════════════════════ -->
+  <section id="how-it-works" class="py-5xl md:py-6xl bg-sage-surface fade-in-section" aria-labelledby="how-heading">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <h2 id="how-heading" class="type-h2 text-warm-black mb-4 max-w-3xl">Agentic engineering with on-demand developer assistance.</h2>
+      <p class="type-body-lg text-warm-mid mb-16 max-w-2xl">Here's how it works.</p>
+
+      <div class="max-w-3xl mx-auto space-y-0">
+
+        <!-- AI LAYER LABEL -->
+        <div class="mb-8">
+          <span class="type-overline text-stone bg-sage-wash px-4 py-2 rounded-pill inline-block">AI Layer</span>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="layer-ai pl-8 pb-12">
+          <div class="flex items-baseline gap-4 mb-3">
+            <span class="type-overline text-forest font-bold shrink-0">01</span>
+            <h3 class="type-h3">You describe your product.</h3>
+          </div>
+          <p class="type-body text-warm-mid ml-10">Tell us what you need. A customer portal, an internal tool, a marketplace, a SaaS app&nbsp;— whatever it is. Our product manager agent collaborates with you to refine your requirements into a clear build&nbsp;plan.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="layer-ai pl-8 pb-12">
+          <div class="flex items-baseline gap-4 mb-3">
+            <span class="type-overline text-forest font-bold shrink-0">02</span>
+            <h3 class="type-h3">AI agents build it.</h3>
+          </div>
+          <p class="type-body text-warm-mid ml-10">A swarm of specialized AI agents gets to work. Project manager breaks requirements into tasks. Backend developer designs your database schemas and APIs. Frontend developer builds responsive UI. Code auditor reviews every line for security and best practices. Everything coordinated, everything&nbsp;tracked.</p>
+        </div>
+
+        <!-- HUMAN LAYER DIVIDER -->
+        <div class="my-10 flex items-center gap-4">
+          <div class="h-px flex-1 bg-forest/30"></div>
+          <span class="type-overline text-forest bg-forest/10 px-5 py-2.5 rounded-pill inline-block font-bold">Then humans step&nbsp;in</span>
+          <div class="h-px flex-1 bg-forest/30"></div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="layer-human pl-8 pb-12 rounded-card">
+          <div class="flex items-baseline gap-4 mb-3 pt-6">
+            <span class="type-overline text-forest font-bold shrink-0">03</span>
+            <h3 class="type-h3">On-demand Developer Assist when you need&nbsp;it.</h3>
+          </div>
+          <p class="type-body text-warm-mid ml-10 pb-2">This is where AgentQ is different from everything else. Hit a wall with a complex integration? Need help connecting a payment gateway or a third-party API? Want your architecture reviewed before you go live? Request Developer Assist&nbsp;— real engineering veterans step directly into your workflow. Not reviewing from a distance. Working alongside you, on&nbsp;demand.</p>
+        </div>
+
+        <!-- OUTCOME LABEL -->
+        <div class="my-8">
+          <span class="type-overline text-stone bg-sage-wash px-4 py-2 rounded-pill inline-block">The Outcome</span>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="pl-8">
+          <div class="flex items-baseline gap-4 mb-3">
+            <span class="type-overline text-forest font-bold shrink-0">04</span>
+            <h3 class="type-h3">You launch.</h3>
+          </div>
+          <p class="type-body text-warm-mid ml-10">One-click deployment. Your app is live with a dedicated database, enterprise security, and clean code you own completely. Launched in days, not&nbsp;months.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: DEVELOPER ASSIST
+       ═══════════════════════════════════════════ -->
+  <section id="developer-assist" class="py-5xl md:py-6xl section-warm-bg fade-in-section" aria-labelledby="devassist-heading">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <h2 id="devassist-heading" class="type-h2 text-warm-black mb-6 max-w-xl">Never stuck. Never&nbsp;alone.</h2>
+      <p class="type-body-lg text-warm-mid mb-16 max-w-3xl">Every AgentQ plan includes Developer Assist&nbsp;— on-demand access to real engineering veterans, directly in your workflow. Not a chatbot. Not a community forum. Not a knowledge base you have to dig through at midnight. Real developers who understand your codebase and can step in when it&nbsp;matters.</p>
+
+      <!-- Capability Cards -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-16">
+        <div class="card-warm">
+          <h3 class="type-h4 mb-3">Architecture &amp; planning</h3>
+          <p class="type-body-sm text-warm-mid">Get expert guidance on how to structure your app so it scales. Database design, API architecture, system design&nbsp;— the decisions that are invisible until they go&nbsp;wrong.</p>
+        </div>
+        <div class="card-warm">
+          <h3 class="type-h4 mb-3">Integrations</h3>
+          <p class="type-body-sm text-warm-mid">Connect payment gateways, CRMs, analytics tools, or any third-party API with expert guidance. Stripe, Razorpay, HubSpot, Segment&nbsp;— if it has an API, we help you wire it&nbsp;up.</p>
+        </div>
+        <div class="card-warm">
+          <h3 class="type-h4 mb-3">Code review &amp; optimization</h3>
+          <p class="type-body-sm text-warm-mid">Get your code professionally reviewed, optimized, and hardened before it goes live. Security audit, performance tuning, and best-practice enforcement.</p>
+        </div>
+        <div class="card-warm">
+          <h3 class="type-h4 mb-3">Deployment &amp; go-live</h3>
+          <p class="type-body-sm text-warm-mid">Get your code deployed to production with confidence. One-click deployment backed by a developer who's verified everything works. No surprises on launch&nbsp;day.</p>
+        </div>
+      </div>
+
+      <!-- Tier Cards -->
+      <div class="grid md:grid-cols-3 gap-4 md:gap-5 mb-12">
+        <div class="tier-card">
+          <p class="type-overline text-stone mb-4">Standard</p>
+          <h3 class="type-h4 mb-3">On-demand developer support.</h3>
+          <p class="type-body-sm text-warm-mid">Submit requests, get help with bugs, integrations, and architecture. For founders building their first&nbsp;product.</p>
+        </div>
+        <div class="tier-card-featured tier-card">
+          <p class="type-overline text-forest mb-4">Priority</p>
+          <h3 class="type-h4 mb-3">Faster response. Direct access.</h3>
+          <p class="type-body-sm" style="color: var(--color-stone);">Faster response. Direct access to senior developers. For founders moving to production and handling real&nbsp;customers.</p>
+        </div>
+        <div class="tier-card">
+          <p class="type-overline text-stone mb-4">Enterprise</p>
+          <h3 class="type-h4 mb-3">Solutions architects, ground up.</h3>
+          <p class="type-body-sm text-warm-mid">Solutions architects help with requirement gathering, scoping, and building from the ground up. Collaborate across teams. For growing businesses with complex&nbsp;needs.</p>
+        </div>
+      </div>
+
+      <p class="type-h3 text-center text-warm-black">Support isn't an add-on. It's half the&nbsp;product.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MID-PAGE CTA BAR
+       ═══════════════════════════════════════════ -->
+  <section class="cta-bar py-16 md:py-20 fade-in-section" aria-label="Call to action">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
+      <a href="https://agentq.dev/" class="btn-primary text-lg">
+        Build with a team behind you <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5: WHAT SHIPS BY DEFAULT
+       ═══════════════════════════════════════════ -->
+  <section id="what-ships" class="py-5xl md:py-6xl fade-in-section" aria-labelledby="ships-heading">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <h2 id="ships-heading" class="type-h2 text-warm-black mb-4 max-w-2xl">Production-ready isn't a feature. It's the whole&nbsp;point.</h2>
+      <p class="type-body-lg text-warm-mid mb-16 max-w-3xl">Other AI builders ship your app on shared databases with no security and no architecture. AgentQ ships production-grade infrastructure from day&nbsp;one.</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        <!-- Item 1 -->
+        <div class="card">
+          <div class="w-10 h-10 rounded-button bg-forest/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4Z" stroke="#007745" stroke-width="1.5"/><path d="M7 7h6M7 10h4" stroke="#007745" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="type-h4 mb-2">Dedicated PostgreSQL database</h3>
+          <p class="type-body-sm text-warm-mid">Your own database per app. Not a shared SQLite instance. Real relational infrastructure that scales with your&nbsp;business.</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="card">
+          <div class="w-10 h-10 rounded-button bg-forest/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2a3 3 0 0 0-3 3v2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2V5a3 3 0 0 0-3-3Z" stroke="#007745" stroke-width="1.5"/><circle cx="10" cy="12" r="1.5" fill="#007745"/></svg>
+          </div>
+          <h3 class="type-h4 mb-2">Role-based access control</h3>
+          <p class="type-body-sm text-warm-mid">Built into the architecture from day one. Not bolted on after a data&nbsp;leak.</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="card">
+          <div class="w-10 h-10 rounded-button bg-forest/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2l6 3.5v5c0 3.5-2.5 6.2-6 7.5-3.5-1.3-6-4-6-7.5v-5L10 2Z" stroke="#007745" stroke-width="1.5" stroke-linejoin="round"/><path d="M7.5 10l2 2 3.5-4" stroke="#007745" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="type-h4 mb-2">Enterprise security</h3>
+          <p class="type-body-sm text-warm-mid">XSS protection. SQL injection prevention. DoS rate limiting. Input validation. Secure headers. Encrypted secrets. Built in from the&nbsp;start.</p>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="card">
+          <div class="w-10 h-10 rounded-button bg-forest/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 6l4 4-4 4M10 14h6" stroke="#007745" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="type-h4 mb-2">Type-safe TypeScript</h3>
+          <p class="type-body-sm text-warm-mid">Full stack&nbsp;— frontend, backend, and database layer. Clean, documented, maintainable code you can read, understand, and hand to any&nbsp;developer.</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="card">
+          <div class="w-10 h-10 rounded-button bg-forest/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2v4M10 14v4M2 10h4M14 10h4" stroke="#007745" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="10" r="3" stroke="#007745" stroke-width="1.5"/></svg>
+          </div>
+          <h3 class="type-h4 mb-2">One-click deployment</h3>
+          <p class="type-body-sm text-warm-mid">Deno Deploy with Neon PostgreSQL and Cloudflare R2. Zero DevOps on your&nbsp;end.</p>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="card">
+          <div class="w-10 h-10 rounded-button bg-forest/10 flex items-center justify-center mb-4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6 3h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="#007745" stroke-width="1.5"/><path d="M8 8l2 2 4-4" stroke="#007745" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="type-h4 mb-2">Full code ownership</h3>
+          <p class="type-body-sm text-warm-mid">No lock-in. No black box. No proprietary platform. Hand your code to any developer. Move it anywhere. It's&nbsp;yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6: WHO THIS IS FOR
+       ═══════════════════════════════════════════ -->
+  <section id="who-for" class="py-5xl md:py-6xl bg-sage-surface fade-in-section" aria-labelledby="who-heading">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+      <h2 id="who-heading" class="type-h2 text-warm-black mb-12 md:mb-16 max-w-2xl">Built for people who build businesses, not&nbsp;software.</h2>
+
+      <div class="grid md:grid-cols-3 gap-4 md:gap-5">
+        <div class="card">
+          <h3 class="type-h4 mb-3">Founders with a product&nbsp;idea</h3>
+          <p class="type-body text-warm-mid">You have the vision. You've tried the AI tools. They got you 70% there. AgentQ gets you the rest of the way&nbsp;— from idea to production-ready software you&nbsp;own.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-3">Solopreneurs and small business&nbsp;owners</h3>
+          <p class="type-body text-warm-mid">You need software that works for your business. Not a project that turns you into a part-time developer. Describe what you need. We build it so it works for real customers with real&nbsp;money.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-3">Teams that need to move&nbsp;fast</h3>
+          <p class="type-body text-warm-mid">You need agency-grade quality without the agency timeline. AgentQ delivers production-ready software with on-demand developer assistance built in. Explain your requirements and we&nbsp;go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7: THE MATH
+       ═══════════════════════════════════════════ -->
+  <section id="the-math" class="py-5xl md:py-6xl fade-in-section" aria-labelledby="math-heading">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12">
+
+      <!-- Part A: Comparison -->
+      <h2 id="math-heading" class="type-h2 text-warm-black mb-12 md:mb-16">The cost of the&nbsp;alternatives.</h2>
+
+      <!-- Desktop Table -->
+      <div class="hidden md:block mb-20 overflow-x-auto">
+        <table class="w-full border-collapse type-body" role="table">
+          <thead>
+            <tr>
+              <th class="text-left type-h5 pb-4 pr-4 border-b-2 border-warm-black/10"></th>
+              <th class="text-left type-h5 pb-4 px-4 border-b-2 border-warm-black/10">AI Builders</th>
+              <th class="text-left type-h5 pb-4 px-6 border-b-2 border-forest bg-forest/5 rounded-t-card">
+                <span class="text-forest">AgentQ</span>
+              </th>
+              <th class="text-left type-h5 pb-4 px-4 border-b-2 border-warm-black/10">Agencies</th>
+              <th class="text-left type-h5 pb-4 px-4 border-b-2 border-warm-black/10">Hiring</th>
+            </tr>
+          </thead>
+          <tbody class="type-body-sm">
+            <tr>
+              <td class="py-4 pr-4 font-medium border-b border-warm-black/5">Cost</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">$20–$100/mo</td>
+              <td class="py-4 px-6 border-b border-forest/10 bg-forest/5 font-medium">$200/mo</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">$5K–$50K per project</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">$80K+/year</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium border-b border-warm-black/5">Skill required</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">None</td>
+              <td class="py-4 px-6 border-b border-forest/10 bg-forest/5 font-medium">None</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">Must manage the project</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">Must recruit and manage</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium border-b border-warm-black/5">Output</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">Demo-ready</td>
+              <td class="py-4 px-6 border-b border-forest/10 bg-forest/5 font-medium text-forest">Production-ready</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">Production-ready</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">Production-ready</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium border-b border-warm-black/5">Developer support</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">None</td>
+              <td class="py-4 px-6 border-b border-forest/10 bg-forest/5 font-medium text-forest">On-demand, built in</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">Full team (at full price)</td>
+              <td class="py-4 px-4 border-b border-warm-black/5 text-warm-mid">You are the manager</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-4 font-medium">The tradeoff</td>
+              <td class="py-4 px-4 text-warm-mid">Hits a wall at production</td>
+              <td class="py-4 px-6 bg-forest/5 font-medium text-forest rounded-b-card">—</td>
+              <td class="py-4 px-4 text-warm-mid">Expensive and slow</td>
+              <td class="py-4 px-4 text-warm-mid">Expensive and slow</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="md:hidden mb-16 space-y-4">
+        <!-- AgentQ Card (first, highlighted) -->
+        <div class="comparison-highlight p-6">
+          <p class="type-overline text-forest mb-3">Recommended</p>
+          <h3 class="type-h3 text-forest mb-4">AgentQ</h3>
+          <dl class="space-y-3 type-body-sm">
+            <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right font-medium">$200/mo</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Skill required</dt><dd class="text-right">None</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right text-forest font-medium">Production-ready</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Developer support</dt><dd class="text-right text-forest font-medium">On-demand, built in</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The tradeoff</dt><dd class="text-right">—</dd></div>
+          </dl>
+        </div>
+        <!-- AI Builders -->
+        <div class="card">
+          <h3 class="type-h4 mb-4">AI Builders</h3>
+          <dl class="space-y-3 type-body-sm">
+            <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right text-warm-mid">$20–$100/mo</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right text-warm-mid">Demo-ready</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Developer support</dt><dd class="text-right text-warm-mid">None</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The tradeoff</dt><dd class="text-right text-warm-mid">Hits a wall at production</dd></div>
+          </dl>
+        </div>
+        <!-- Agencies -->
+        <div class="card">
+          <h3 class="type-h4 mb-4">Agencies</h3>
+          <dl class="space-y-3 type-body-sm">
+            <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right text-warm-mid">$5K–$50K per project</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right text-warm-mid">Production-ready</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Developer support</dt><dd class="text-right text-warm-mid">Full team (at full price)</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The tradeoff</dt><dd class="text-right text-warm-mid">Expensive and slow</dd></div>
+          </dl>
+        </div>
+        <!-- Hiring -->
+        <div class="card">
+          <h3 class="type-h4 mb-4">Hiring</h3>
+          <dl class="space-y-3 type-body-sm">
+            <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right text-warm-mid">$80K+/year</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right text-warm-mid">Production-ready</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Developer support</dt><dd class="text-right text-warm-mid">You are the manager</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The tradeoff</dt><dd class="text-right text-warm-mid">Expensive and slow</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Part B: Pricing -->
+      <div class="text-center">
+        <h2 class="type-h2 text-warm-black mb-12">Simple pricing. Everything&nbsp;included.</h2>
+
+        <div class="inline-block">
+          <div class="mb-2">
+            <span class="price-amount">$600</span>
+            <span class="price-period"> / quarter</span>
+          </div>
+          <p class="type-body text-warm-mid mb-12">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
+        </div>
+
+        <div class="max-w-md mx-auto text-left">
+          <ul class="space-y-3 type-body">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Agentic engineering&nbsp;— multi-agent AI build system</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Dedicated database and hosting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Enterprise security by default</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>On-demand Developer Assist&nbsp;— real engineers in your workflow</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Full code ownership</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-forest shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>One-click deployment</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 8: CLOSING CTA
+       ═══════════════════════════════════════════ -->
+  <section id="closing-cta" class="py-6xl fade-in-section" aria-labelledby="closing-heading">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12 text-center">
+      <h2 id="closing-heading" class="type-display text-warm-black mb-6">Your idea deserves to&nbsp;ship.</h2>
+      <p class="type-body-lg text-warm-mid mb-10 max-w-2xl mx-auto">Describe your product. Our AI agents build it. Our developers make sure it works. You launch it. That's&nbsp;it.</p>
+      <a href="https://agentq.dev/" class="btn-primary text-lg mb-6">
+        Start building something real <span aria-hidden="true">→</span>
+      </a>
+      <p class="type-body-sm text-stone mt-6">Own your code. Launch with confidence. Scale when you're&nbsp;ready.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 9: FAQ
+       ═══════════════════════════════════════════ -->
+  <section id="faq" class="py-5xl md:py-6xl bg-sage-surface fade-in-section" aria-labelledby="faq-heading">
+    <div class="max-w-[800px] mx-auto px-6 md:px-12">
+      <h2 id="faq-heading" class="type-h2 text-warm-black mb-12">Frequently asked questions</h2>
+
+      <div class="divide-y divide-warm-black/10">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do I need to know how to code?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">No. You describe what you want in plain language. AgentQ's AI agents handle the architecture, frontend, backend, and database. When things get complex, our developers step in through Developer&nbsp;Assist.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What if I already started building on another platform?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">Bring it. We can work with what you've started or help you start fresh&nbsp;— whichever gets you to launch&nbsp;faster.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Do I own the code?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">Completely. Your code is clean, documented, and yours. Hand it to any developer. Move it to any hosting provider. No lock-in, no proprietary&nbsp;platforms.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What kind of apps can AgentQ build?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">Customer portals, SaaS products, internal tools, marketplaces, booking systems, dashboards&nbsp;— any web application. If you can describe it, we can build&nbsp;it.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How is this different from other AI app builders?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">Two things. First: production-ready output&nbsp;— dedicated databases, enterprise security, clean code. Not the shared infrastructure and toy databases other tools ship. Second: on-demand developer assistance built into every plan. AI builders leave you alone when things break. AgentQ&nbsp;doesn't.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What does Developer Assist actually include?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">Architecture guidance, integration support (payment gateways, CRMs, third-party APIs), professional code review and optimization, and deployment assistance. Real engineers in your workflow&nbsp;— not a chatbot. Included in every&nbsp;plan.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What happens when my business grows?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">Your software scales with you. As your needs get more complex, Developer Assist tiers scale up too. Enterprise plans include solutions architects who help with requirement gathering and build from the ground&nbsp;up.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="py-12 border-t border-warm-black/5" role="contentinfo">
+    <div class="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="https://agentq.dev/" class="logo text-xl" aria-label="AgentQ home">
+        Agent<span class="logo-q">Q</span>
+      </a>
+      <p class="type-body-sm text-stone">&copy; 2025 Qwikbuild. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+import "./styles.css";
+
+/* ═══════════════════════════════════════════
+   VARIANT HANDLING
+   No flash: all heroes hidden by CSS default,
+   correct one shown on DOMContentLoaded.
+   ═══════════════════════════════════════════ */
+
+function initVariant() {
+  const params = new URLSearchParams(window.location.search);
+  const variant = params.get("v") || "c"; // Default to Variant C
+  const validVariants = ["a", "b", "c", "d"];
+  const selected = validVariants.includes(variant) ? variant : "c";
+
+  // Set data-variant on body for analytics
+  document.body.setAttribute("data-variant", selected);
+
+  // Show the correct hero
+  const heroEl = document.getElementById(`hero-${selected}`);
+  if (heroEl) {
+    heroEl.classList.add("active");
+  }
+
+  // Trigger strikethrough animation for Variant C after a brief delay
+  if (selected === "c") {
+    setTimeout(() => {
+      const strike = document.querySelector(".strike-through");
+      if (strike) strike.classList.add("animate");
+    }, 400);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   STICKY NAV — show on scroll past hero
+   ═══════════════════════════════════════════ */
+
+function initStickyNav() {
+  const nav = document.getElementById("sticky-nav");
+  if (!nav) return;
+
+  let lastKnown = 0;
+  let ticking = false;
+
+  function onScroll() {
+    lastKnown = window.scrollY;
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        // Show nav after scrolling past ~80% of viewport height
+        if (lastKnown > window.innerHeight * 0.8) {
+          nav.classList.add("visible");
+        } else {
+          nav.classList.remove("visible");
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+}
+
+/* ═══════════════════════════════════════════
+   FAQ ACCORDION
+   ═══════════════════════════════════════════ */
+
+function initFaq() {
+  const items = document.querySelectorAll(".faq-item");
+  items.forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    if (!question) return;
+    question.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+      // Close all others
+      items.forEach((i) => i.classList.remove("open"));
+      // Toggle current
+      if (!isOpen) {
+        item.classList.add("open");
+      }
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════
+   SCROLL FADE-IN — IntersectionObserver
+   ═══════════════════════════════════════════ */
+
+function initScrollAnimations() {
+  const sections = document.querySelectorAll(".fade-in-section");
+  if (!sections.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+/* ═══════════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════════ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  initVariant();
+  initStickyNav();
+  initFaq();
+  initScrollAnimations();
+});
