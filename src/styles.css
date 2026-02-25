@@ -62,7 +62,7 @@
    Supported: .woff2 preferred */
 @font-face {
   font-family: "PP Mori";
-  src: url("/fonts/PPMori-SemiBold.woff2") format("woff2");
+  src: url("/fonts/PPMori-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -70,7 +70,7 @@
 
 @font-face {
   font-family: "PP Mori";
-  src: url("/fonts/PPMori-ExtraBold.woff2") format("woff2");
+  src: url("/fonts/PPMori-Extrabold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
