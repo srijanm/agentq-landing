@@ -306,19 +306,40 @@ body {
   font-weight: 600;
   font-size: 13px;
   line-height: 1.4;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-forest);
-  background: rgba(0, 119, 69, 0.08);
+  letter-spacing: 0.02em;
   padding: 8px 16px;
   border-radius: var(--radius-pill);
-  border: 1.5px solid rgba(0, 119, 69, 0.2);
-  animation: badge-pulse 3s ease-in-out infinite;
+  border: 1.5px solid;
+  animation: badge-glow 3s ease-in-out infinite;
 }
 
-@keyframes badge-pulse {
-  0%, 100% { border-color: rgba(0, 119, 69, 0.2); }
-  50% { border-color: rgba(0, 119, 69, 0.5); }
+.overline-badge--teal {
+  color: var(--color-teal);
+  background: rgba(43, 168, 168, 0.08);
+  border-color: rgba(43, 168, 168, 0.25);
+  --badge-glow-color: rgba(43, 168, 168, 0.15);
+  --badge-border-from: rgba(43, 168, 168, 0.25);
+  --badge-border-to: rgba(43, 168, 168, 0.55);
+}
+
+.overline-badge--cobalt {
+  color: var(--color-cobalt);
+  background: rgba(68, 100, 217, 0.08);
+  border-color: rgba(68, 100, 217, 0.25);
+  --badge-glow-color: rgba(68, 100, 217, 0.15);
+  --badge-border-from: rgba(68, 100, 217, 0.25);
+  --badge-border-to: rgba(68, 100, 217, 0.55);
+}
+
+@keyframes badge-glow {
+  0%, 100% {
+    border-color: var(--badge-border-from);
+    box-shadow: 0 0 0 0 var(--badge-glow-color);
+  }
+  50% {
+    border-color: var(--badge-border-to);
+    box-shadow: 0 0 12px 2px var(--badge-glow-color);
+  }
 }
 
 /* ═══════════════════════════════════════════
@@ -327,9 +348,9 @@ body {
 
 .process-flow {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .process-step {
@@ -365,32 +386,13 @@ body {
 }
 
 .process-arrow {
-  color: var(--color-cool-light);
-  font-size: 14px;
-  opacity: 0;
-  animation: step-appear 0.3s ease forwards;
-  animation-delay: var(--step-delay, 0s);
+  display: none;
 }
-
-.process-flow .process-step:nth-child(3) ~ .process-arrow { animation-delay: 0.4s; }
-.process-flow .process-step:nth-child(5) ~ .process-arrow { animation-delay: 0.7s; }
-.process-flow .process-step:nth-child(7) ~ .process-arrow { animation-delay: 1.0s; }
 
 @keyframes step-appear {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 767px) {
-  .process-flow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  .process-arrow {
-    display: none;
   }
 }
 
