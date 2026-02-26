@@ -31,36 +31,6 @@ function initVariant() {
 }
 
 /* ═══════════════════════════════════════════
-   STICKY NAV — show on scroll past hero
-   ═══════════════════════════════════════════ */
-
-function initStickyNav() {
-  const nav = document.getElementById("sticky-nav");
-  if (!nav) return;
-
-  let lastKnown = 0;
-  let ticking = false;
-
-  function onScroll() {
-    lastKnown = window.scrollY;
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        // Show nav after scrolling past ~80% of viewport height
-        if (lastKnown > window.innerHeight * 0.8) {
-          nav.classList.add("visible");
-        } else {
-          nav.classList.remove("visible");
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-}
-
-/* ═══════════════════════════════════════════
    FAQ ACCORDION
    ═══════════════════════════════════════════ */
 
@@ -115,7 +85,6 @@ function initScrollAnimations() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initVariant();
-  initStickyNav();
   initFaq();
   initScrollAnimations();
 });

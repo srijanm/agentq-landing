@@ -238,44 +238,24 @@ body {
    ═══════════════════════════════════════════ */
 
 .top-nav {
-  position: relative;
-  z-index: 50;
-  background-color: var(--color-sage-wash);
-  border-bottom: 1px solid rgba(28, 24, 20, 0.06);
-}
-
-.nav-link {
-  color: var(--color-warm-mid);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-
-.nav-link:hover {
-  color: var(--color-forest);
-}
-
-/* ═══════════════════════════════════════════
-   STICKY NAV — appears on scroll
-   ═══════════════════════════════════════════ */
-
-.sticky-nav {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
   background-color: rgba(244, 246, 243, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(28, 24, 20, 0.08);
-  transform: translateY(-100%);
-  opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.sticky-nav.visible {
-  transform: translateY(0);
-  opacity: 1;
+.nav-link {
+  color: var(--color-warm-mid);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-forest);
 }
 
 /* ═══════════════════════════════════════════
