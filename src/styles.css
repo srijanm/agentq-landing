@@ -439,6 +439,45 @@ body {
   height: 48px;
 }
 
+/* Problem cards — horizontal layout with image on left */
+.problem-card {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  background: rgba(227, 78, 52, 0.05);
+  border: 2px solid rgba(227, 78, 52, 0.15);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+
+.problem-card-img {
+  background: rgba(227, 78, 52, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.problem-card-img .image-placeholder-sm {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  min-height: unset;
+}
+
+.problem-card-text {
+  padding: 20px 24px;
+}
+
+/* Problem transition resolve block */
+.problem-resolve {
+  background: rgba(0, 119, 69, 0.06);
+  border: 2px solid rgba(0, 119, 69, 0.15);
+  border-radius: var(--radius-card);
+  padding: 28px 32px;
+  text-align: center;
+}
+
 /* ═══════════════════════════════════════════
    IMAGE PLACEHOLDERS
    ═══════════════════════════════════════════ */

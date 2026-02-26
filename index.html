@@ -166,47 +166,55 @@
 
       <div class="grid sm:grid-cols-2 gap-4">
         <!-- Pain Card 1 -->
-        <div class="card">
-          <div class="card-icon-area mb-4">
-            <div class="image-placeholder-sm"><span class="text-xs text-stone">img</span></div>
+        <div class="problem-card">
+          <div class="problem-card-img" aria-hidden="true">
+            <div class="image-placeholder-sm h-full w-full"><span class="text-xs text-stone">img</span></div>
           </div>
-          <h3 class="type-h4 mb-2">Built, but not production-grade.</h3>
-          <p class="type-body text-warm-mid">Your app works in the demo. It breaks with real users. Auth has gaps. Payments fail silently. The database buckles under load. You built something&nbsp;&mdash; but it's not production-ready, and you can't launch it like&nbsp;this.</p>
+          <div class="problem-card-text">
+            <p class="type-body text-warm-mid">Your app works as a demo, but breaks with real users. Auth has gaps. Payments fail. You've built something which works as a demo, but isn't ready to&nbsp;launch.</p>
+          </div>
         </div>
 
         <!-- Pain Card 2 -->
-        <div class="card">
-          <div class="card-icon-area mb-4">
-            <div class="image-placeholder-sm"><span class="text-xs text-stone">img</span></div>
+        <div class="problem-card">
+          <div class="problem-card-img" aria-hidden="true">
+            <div class="image-placeholder-sm h-full w-full"><span class="text-xs text-stone">img</span></div>
           </div>
-          <h3 class="type-h4 mb-2">Unsecure code. Toy databases. No&nbsp;architecture.</h3>
-          <p class="type-body text-warm-mid">The AI gave you a shared SQLite instance and called it a backend. No role-based access. No input validation. No encryption. The security is an afterthought&nbsp;&mdash; if it's a thought at&nbsp;all.</p>
+          <div class="problem-card-text">
+            <p class="type-body text-warm-mid">AI gave you a shared SQLite instance for a backend, no role-based access &amp; no encryption. The security is an afterthought &amp; the architecture is not&nbsp;scalable.</p>
+          </div>
         </div>
 
         <!-- Pain Card 3 -->
-        <div class="card">
-          <div class="card-icon-area mb-4">
-            <div class="image-placeholder-sm"><span class="text-xs text-stone">img</span></div>
+        <div class="problem-card">
+          <div class="problem-card-img" aria-hidden="true">
+            <div class="image-placeholder-sm h-full w-full"><span class="text-xs text-stone">img</span></div>
           </div>
-          <h3 class="type-h4 mb-2">Code nobody can read, debug, or hand&nbsp;off.</h3>
-          <p class="type-body text-warm-mid">The AI wrote thousands of lines of spaghetti code that no one can understand. When something breaks, you can't find the problem. When you bring in a developer, they want to start&nbsp;over.</p>
+          <div class="problem-card-text">
+            <p class="type-body text-warm-mid">AI wrote thousands of lines of spaghetti code. When something breaks, you can't find the problem because even if you bring a developer, they can't understand&nbsp;it.</p>
+          </div>
         </div>
 
         <!-- Pain Card 4 -->
-        <div class="card">
-          <div class="card-icon-area mb-4">
-            <div class="image-placeholder-sm"><span class="text-xs text-stone">img</span></div>
+        <div class="problem-card">
+          <div class="problem-card-img" aria-hidden="true">
+            <div class="image-placeholder-sm h-full w-full"><span class="text-xs text-stone">img</span></div>
           </div>
-          <h3 class="type-h4 mb-2">Credits gone. No one to&nbsp;call.</h3>
-          <p class="type-body text-warm-mid">Every fix creates a new bug. Every new bug burns more credits. The AI loops on the same error. There's no support team. No developer on call. Just you, a broken app, and a credit counter ticking&nbsp;down.</p>
+          <div class="problem-card-text">
+            <p class="type-body text-warm-mid">Every fix creates a new bug. Every new bug burns more credits. The AI loops on the same error &amp; there's no support team &amp; no one to&nbsp;call.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Transition line -->
-      <div class="mt-12 md:mt-16 max-w-[768px] mx-auto text-center">
-        <p class="type-body-lg text-warm-black leading-relaxed">What vibecoding got right: the speed, the simplicity, the ability to describe an idea and watch it come to life.</p>
-        <p class="type-body-lg text-warm-black leading-relaxed mt-2"><strong>What it got wrong: <em>everything after that.</em></strong></p>
-        <p class="type-h3 text-forest mt-5">AgentQ is white-glove vibecoding&nbsp;&mdash; agentic engineering with on-demand developer assistance, so what you build actually&nbsp;ships.</p>
+      <!-- Transition text -->
+      <div class="mt-14 md:mt-20 max-w-[768px] mx-auto text-center">
+        <p class="type-body-lg text-stone leading-relaxed">What vibecoding got right: the speed, the simplicity, the ability to describe an idea and watch it come to&nbsp;life.</p>
+        <p class="type-h2 text-warm-black mt-4"><strong>What it got wrong: <em>everything after&nbsp;that.</em></strong></p>
+      </div>
+      <div class="mt-8 max-w-[768px] mx-auto">
+        <div class="problem-resolve">
+          <p class="type-h3 text-forest">AgentQ is white-glove vibecoding&nbsp;&mdash; agentic engineering with on-demand developer assistance, so what you build actually&nbsp;ships.</p>
+        </div>
       </div>
     </div>
   </section>
