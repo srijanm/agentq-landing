@@ -351,6 +351,16 @@ body {
   }
 }
 
+/* Hero image subtle animation */
+.hero-img {
+  animation: hero-drift 6s ease-in-out infinite;
+}
+
+@keyframes hero-drift {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.01); }
+}
+
 /* ═══════════════════════════════════════════
    HERO PROCESS FLOW (Variant C)
    ═══════════════════════════════════════════ */
