@@ -442,16 +442,16 @@ body {
 /* Problem cards — horizontal layout with image on left */
 .problem-card {
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 160px 1fr;
   gap: 0;
-  background: rgba(227, 78, 52, 0.05);
-  border: 2px solid rgba(227, 78, 52, 0.15);
+  background: var(--color-off-white);
+  border: 2px solid rgba(28, 24, 20, 0.08);
   border-radius: var(--radius-card);
   overflow: hidden;
 }
 
 .problem-card-img {
-  background: rgba(227, 78, 52, 0.08);
+  background: rgba(28, 24, 20, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
