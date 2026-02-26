@@ -463,7 +463,7 @@ body {
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 0;
-  background: var(--color-sage-wash);
+  background: #FAF9F5;
   border: 1.5px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   overflow: hidden;
