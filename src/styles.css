@@ -470,7 +470,7 @@ body {
 }
 
 .problem-card-img {
-  background: rgba(28, 24, 20, 0.04);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
