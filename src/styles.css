@@ -200,6 +200,22 @@ body {
   text-transform: uppercase;
 }
 
+/* Section labels — display font, lighter weight, between h3 and h4 */
+.section-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: -0.045em;
+}
+
+/* Section closer — visual separator for section-ending statements */
+.section-closer {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 2px solid rgba(28, 24, 20, 0.08);
+}
+
 /* Responsive type scaling */
 @media (max-width: 1199px) {
   .type-display { font-size: 44px; }
