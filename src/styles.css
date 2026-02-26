@@ -10,7 +10,7 @@
   --color-forest-hover: #005C36;
 
   /* Colors — Backgrounds */
-  --color-sage-wash: #EDE8DE;
+  --color-sage-wash: #FAF9F5;
   --color-sage-surface: #E3DED2;
 
   /* Colors — Neutrals */
@@ -257,7 +257,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(237, 232, 222, 0.92);
+  background-color: rgba(250, 249, 245, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(28, 24, 20, 0.08);
