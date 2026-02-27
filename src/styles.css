@@ -656,16 +656,19 @@ body {
 }
 
 .who-row {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
+  display: flex;
   gap: 16px;
-  grid-template-rows: auto;
+}
+
+.who-row > .card {
+  flex: 3;
+  align-self: flex-start;
 }
 
 .who-row-img {
+  flex: 2;
   overflow: hidden;
   border-radius: var(--radius-card);
-  max-height: 100%;
 }
 
 .who-placeholder {
