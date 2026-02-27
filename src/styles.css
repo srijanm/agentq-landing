@@ -707,7 +707,6 @@ body {
   border-top: 1.5px solid var(--color-warm-black);
   border-top-left-radius: var(--radius-card);
   border-top-right-radius: var(--radius-card);
-  padding-top: 20px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
