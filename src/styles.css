@@ -700,15 +700,21 @@ body {
   color: white;
   border-left: 1.5px solid var(--color-warm-black);
   border-right: 1.5px solid var(--color-warm-black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .comparison-col-highlight.rounded-t-card {
   border-top: 1.5px solid var(--color-warm-black);
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
   padding-top: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .comparison-col-highlight.rounded-b-card {
   border-bottom: 1.5px solid var(--color-warm-black);
+  border-bottom-left-radius: var(--radius-card);
+  border-bottom-right-radius: var(--radius-card);
 }
 
 .comparison-highlight {
