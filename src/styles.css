@@ -667,7 +667,8 @@ body {
 
 .who-row-img {
   flex: 2;
-  align-self: stretch;
+  overflow: hidden;
+  border-radius: var(--radius-card);
 }
 
 .who-placeholder {
