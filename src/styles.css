@@ -698,12 +698,23 @@ body {
 .comparison-col-highlight {
   background-color: var(--color-forest);
   color: white;
+  border-left: 1.5px solid var(--color-warm-black);
+  border-right: 1.5px solid var(--color-warm-black);
+}
+
+.comparison-col-highlight.rounded-t-card {
+  border-top: 1.5px solid var(--color-warm-black);
+  padding-top: 20px;
+}
+
+.comparison-col-highlight.rounded-b-card {
+  border-bottom: 1.5px solid var(--color-warm-black);
 }
 
 .comparison-highlight {
   background-color: var(--color-forest);
   color: white;
-  border: 1.5px solid var(--color-forest);
+  border: 1.5px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   position: relative;
 }
