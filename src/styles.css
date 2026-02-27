@@ -696,11 +696,13 @@ body {
    ═══════════════════════════════════════════ */
 
 .comparison-col-highlight {
-  background-color: rgba(0, 119, 69, 0.05);
+  background-color: var(--color-forest);
+  color: white;
 }
 
 .comparison-highlight {
-  background-color: rgba(0, 119, 69, 0.06);
+  background-color: var(--color-forest);
+  color: white;
   border: 1.5px solid var(--color-forest);
   border-radius: var(--radius-card);
   position: relative;
