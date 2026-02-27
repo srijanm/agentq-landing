@@ -708,9 +708,6 @@ body {
   border-top-left-radius: var(--radius-card);
   border-top-right-radius: var(--radius-card);
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-  position: relative;
-  top: -20px;
-  padding-top: 20px;
 }
 
 .comparison-col-highlight.rounded-b-card {
