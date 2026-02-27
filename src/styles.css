@@ -377,8 +377,8 @@ body {
   align-items: center;
   gap: 8px;
   opacity: 0;
-  transform: translateY(8px);
-  animation: step-appear 0.4s ease forwards;
+  transform: translateY(16px);
+  animation: step-appear 0.6s ease forwards;
   animation-delay: var(--step-delay, 0s);
 }
 
