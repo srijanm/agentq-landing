@@ -21,6 +21,15 @@ function initVariant() {
     heroEl.classList.add("active");
   }
 
+  // Variant A: update shared CTA button copy
+  if (selected === "a") {
+    const navCta = document.getElementById("nav-cta");
+    const closingCta = document.getElementById("closing-cta");
+    const arrow = ' <span aria-hidden="true">&rarr;</span>';
+    if (navCta) navCta.innerHTML = "Book a launch call " + arrow;
+    if (closingCta) closingCta.innerHTML = "Book a launch call " + arrow;
+  }
+
   // Trigger strikethrough animation for Variant C after a brief delay
   if (selected === "c") {
     setTimeout(() => {
