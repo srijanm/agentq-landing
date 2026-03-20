@@ -376,6 +376,11 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <h2 id="evals-heading" class="type-h2 text-warm-black mb-10 max-w-[672px]">Independently tested. Measurably&nbsp;better.</h2>
 
+      <!-- Eval chart placeholder -->
+      <div class="image-placeholder mb-10" style="min-height: 240px;">
+        <p class="type-body-sm text-stone">Comparison bar chart — AgentQ vs leading AI coding platforms</p>
+      </div>
+
       <div class="grid lg:grid-cols-[2fr_1fr] gap-6">
         <!-- 2/3: Proof points -->
         <div class="space-y-4">
@@ -533,9 +538,9 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
 
       <div class="grid md:grid-cols-3 gap-4">
         <!-- Testimonial 1 -->
-        <a href="/case-studies/placeholder-1" class="testimonial-card">
+        <a href="/case-studies/edtech-platform" class="testimonial-card">
           <div class="testimonial-photo" aria-hidden="true">
-            <div class="testimonial-photo-placeholder"></div>
+            <img src="https://i.pravatar.cc/96?img=12" alt="" class="testimonial-photo-img">
           </div>
           <blockquote class="type-body text-warm-black mb-4">&ldquo;We went from a broken MVP to a launched product in six days. The developer support made the&nbsp;difference.&rdquo;</blockquote>
           <div class="mt-auto">
@@ -545,9 +550,9 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         </a>
 
         <!-- Testimonial 2 -->
-        <a href="/case-studies/placeholder-2" class="testimonial-card">
+        <a href="/case-studies/logistics-system" class="testimonial-card">
           <div class="testimonial-photo" aria-hidden="true">
-            <div class="testimonial-photo-placeholder"></div>
+            <img src="https://i.pravatar.cc/96?img=32" alt="" class="testimonial-photo-img">
           </div>
           <blockquote class="type-body text-warm-black mb-4">&ldquo;We spent three months on Lovable and couldn't ship. AgentQ got us live in a&nbsp;week.&rdquo;</blockquote>
           <div class="mt-auto">
@@ -557,9 +562,9 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         </a>
 
         <!-- Testimonial 3 -->
-        <a href="/case-studies/placeholder-3" class="testimonial-card">
+        <a href="/case-studies/saas-mvp" class="testimonial-card">
           <div class="testimonial-photo" aria-hidden="true">
-            <div class="testimonial-photo-placeholder"></div>
+            <img src="https://i.pravatar.cc/96?img=51" alt="" class="testimonial-photo-img">
           </div>
           <blockquote class="type-body text-warm-black mb-4">&ldquo;I'm not technical. AgentQ gave me production-ready software and a developer I could actually talk&nbsp;to.&rdquo;</blockquote>
           <div class="mt-auto">
@@ -598,48 +603,52 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
   <!-- ═══════════════════════════════════════════
        SECTION 11: PRICING
        ═══════════════════════════════════════════ -->
-  <section id="pricing" class="py-16 md:py-20 fade-in-section" aria-labelledby="pricing-heading">
-    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
-        <div>
-          <h2 id="pricing-heading" class="type-h2 text-warm-black mb-8">Simple pricing. Everything&nbsp;included.</h2>
+  <section id="pricing" class="py-16 md:py-20 fade-in-section section-with-bg" aria-labelledby="pricing-heading">
+    <div class="section-bg" aria-hidden="true">
+      <div class="section-bg-placeholder">
+        <p class="type-body-sm text-stone">Pricing background image — same style as hero</p>
+      </div>
+    </div>
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10 relative z-10">
+      <div class="max-w-[672px] mx-auto text-center">
+        <h2 id="pricing-heading" class="type-h2 text-warm-black mb-8">Simple pricing. Everything&nbsp;included.</h2>
 
-          <div class="mb-6">
-            <span class="price-amount">$600</span>
-            <span class="price-period"> / quarter</span>
-          </div>
-          <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
+        <div class="mb-6">
+          <span class="price-amount">$600</span>
+          <span class="price-period"> / quarter</span>
+        </div>
+        <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
 
-          <ul class="space-y-3 type-body">
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Agentic engineering&nbsp;&mdash; multi-agent AI build system</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Dedicated database and hosting</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Enterprise security by default</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>On-demand Developer Assist&nbsp;&mdash; real engineers in your workflow</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Full code ownership</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>One-click deployment</span>
-            </li>
-          </ul>
-        </div>
-        <div class="hidden lg:block" style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); overflow: hidden;">
-          <img src="/images/pricing.png" alt="" class="w-full h-auto">
-        </div>
+        <ul class="space-y-3 type-body text-left max-w-[480px] mx-auto mb-8">
+          <li class="flex items-start gap-3">
+            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+            <span>Agentic engineering&nbsp;&mdash; multi-agent AI build system</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+            <span>Dedicated database and hosting</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+            <span>Enterprise security by default</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+            <span>On-demand Developer Assist&nbsp;&mdash; real engineers in your workflow</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+            <span>Full code ownership</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+            <span>One-click deployment</span>
+          </li>
+        </ul>
+
+        <a href={calendarUrl} class="btn-primary text-lg">
+          Book a launch call <span aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </div>
   </section>
