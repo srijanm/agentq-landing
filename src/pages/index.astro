@@ -402,31 +402,27 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           </div>
         </div>
 
-        <!-- 1/3: Technical summary -->
-        <div class="card" style="background: var(--color-warm-black); border-color: var(--color-warm-black); align-self: start;">
-          <h3 class="type-h4 text-off-white mb-4">For the technical details</h3>
-          <p class="type-body text-stone mb-6">AgentQ was evaluated across 68 metrics against 5 leading AI coding platforms using the QwikBuild-Bench framework. Highest score in engineering, backend infrastructure, security, and requirement&nbsp;capture.</p>
-          <a href="/evals" class="type-body font-medium text-forest hover:text-forest-hover transition-colors">
-            Read the full evaluation <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- CTA box -->
-      <div class="card mt-8" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <h3 class="type-h4 text-white mb-1">See the data in action.</h3>
-            <p class="type-body text-white/70">Book a demo and we'll walk you through what AgentQ can build for&nbsp;you.</p>
-          </div>
-          <form class="email-cta-row shrink-0" novalidate>
-            <input type="email" class="email-cta-input" placeholder="Enter your email" required>
-            <a href={calendarUrl} class="btn-primary email-cta-btn" style="background-color: var(--color-warm-black);" data-calendar-url={calendarUrl}>
-              Book a Demo <span aria-hidden="true">&rarr;</span>
+        <!-- 1/3: Technical summary + CTA stacked -->
+        <div class="space-y-4" style="align-self: start;">
+          <div class="card" style="background: var(--color-warm-black); border-color: var(--color-warm-black);">
+            <h3 class="type-h4 text-off-white mb-4">For the technical details</h3>
+            <p class="type-body text-stone mb-6">AgentQ was evaluated across 68 metrics against 5 leading AI coding platforms using the QwikBuild-Bench framework. Highest score in engineering, backend infrastructure, security, and requirement&nbsp;capture.</p>
+            <a href="/evals" class="type-body font-medium text-forest hover:text-forest-hover transition-colors">
+              Read the full evaluation <span aria-hidden="true">&rarr;</span>
             </a>
-          </form>
+          </div>
+
+          <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
+            <h3 class="type-h4 text-white mb-2">See the data in action.</h3>
+            <p class="type-body text-white/70 mb-4">Book a demo and we'll walk you through what AgentQ can build for&nbsp;you.</p>
+            <form class="email-cta-row" style="max-width: 100%;" novalidate>
+              <input type="email" class="email-cta-input" placeholder="Your email" required>
+              <a href={calendarUrl} class="btn-primary email-cta-btn" style="background-color: var(--color-warm-black);" data-calendar-url={calendarUrl}>
+                Book a Demo <span aria-hidden="true">&rarr;</span>
+              </a>
+            </form>
+          </div>
         </div>
-      </div>
     </div>
   </section>
 
