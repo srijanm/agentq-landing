@@ -80,11 +80,25 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           </div>
         </div>
 
-        <!-- Connector lines (SVG) -->
-        <svg class="hero-connectors" viewBox="0 0 800 80" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-          <path class="hero-connector-line" d="M133 5 Q266 40 400 70" stroke="var(--color-cool-light)"/>
-          <path class="hero-connector-line" d="M400 5 L400 70" stroke="var(--color-cool-light)"/>
-          <path class="hero-connector-line" d="M667 5 Q533 40 400 70" stroke="var(--color-cool-light)"/>
+        <!-- Connector lines (SVG) — tree structure with junction dots -->
+        <svg class="hero-connectors" viewBox="0 0 800 120" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <!-- Lines from step nodes down to junction points -->
+          <line class="hero-connector-line" x1="133" y1="0" x2="133" y2="40"/>
+          <line class="hero-connector-line" x1="400" y1="0" x2="400" y2="40"/>
+          <line class="hero-connector-line" x1="667" y1="0" x2="667" y2="40"/>
+
+          <!-- Lines from junctions converging to center -->
+          <line class="hero-connector-line" x1="133" y1="40" x2="400" y2="90"/>
+          <line class="hero-connector-line" x1="400" y1="40" x2="400" y2="90"/>
+          <line class="hero-connector-line" x1="667" y1="40" x2="400" y2="90"/>
+
+          <!-- Junction dots -->
+          <circle class="hero-connector-dot" cx="133" cy="40" r="3.5"/>
+          <circle class="hero-connector-dot" cx="400" cy="40" r="3.5"/>
+          <circle class="hero-connector-dot" cx="667" cy="40" r="3.5"/>
+
+          <!-- Center convergence dot -->
+          <circle class="hero-connector-dot hero-connector-dot--center" cx="400" cy="90" r="4.5"/>
         </svg>
 
         <!-- Final node -->

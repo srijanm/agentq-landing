@@ -337,23 +337,52 @@ body {
 
 .hero-connectors {
   width: 100%;
-  height: 80px;
-  margin: -4px 0;
+  height: 120px;
+  margin: 0;
   opacity: 0;
   animation: hero-connectors-appear 0.8s ease forwards 1.2s;
 }
 
 .hero-connector-line {
-  stroke-dasharray: 6 6;
-  stroke-dashoffset: 0;
-  animation: hero-line-flow 2s linear infinite;
-  stroke-width: 1.5;
+  stroke: rgba(28, 24, 20, 0.12);
+  stroke-width: 1.2;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: hero-line-draw 1s ease forwards;
+  animation-delay: 1.3s;
 }
 
-@keyframes hero-line-flow {
+.hero-connector-line:nth-child(2) { animation-delay: 1.4s; }
+.hero-connector-line:nth-child(3) { animation-delay: 1.5s; }
+.hero-connector-line:nth-child(4) { animation-delay: 1.7s; }
+.hero-connector-line:nth-child(5) { animation-delay: 1.8s; }
+.hero-connector-line:nth-child(6) { animation-delay: 1.9s; }
+
+.hero-connector-dot {
+  fill: rgba(28, 24, 20, 0.15);
+  stroke: rgba(28, 24, 20, 0.1);
+  stroke-width: 1;
+  opacity: 0;
+  animation: hero-dot-appear 0.4s ease forwards;
+  animation-delay: 1.6s;
+}
+
+.hero-connector-dot--center {
+  fill: var(--color-forest);
+  stroke: rgba(0, 119, 69, 0.2);
+  stroke-width: 2;
+  animation-delay: 2.1s;
+}
+
+@keyframes hero-line-draw {
   to {
-    stroke-dashoffset: -24;
+    stroke-dashoffset: 0;
   }
+}
+
+@keyframes hero-dot-appear {
+  from { opacity: 0; transform: scale(0); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @keyframes hero-node-appear {
