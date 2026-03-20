@@ -1,4 +1,23 @@
 /* ═══════════════════════════════════════════
+   HERO VARIANT HANDLING
+   ?v=1 (pain), ?v=2 (outcome, default), ?v=3 (vc)
+   ═══════════════════════════════════════════ */
+
+function initVariant() {
+  const params = new URLSearchParams(window.location.search);
+  const variant = params.get("v") || "2";
+  const valid = ["1", "2", "3"];
+  const selected = valid.includes(variant) ? variant : "2";
+
+  document.body.setAttribute("data-variant", selected);
+
+  const heroEl = document.getElementById(`hero-v${selected}`);
+  if (heroEl) {
+    heroEl.classList.add("active");
+  }
+}
+
+/* ═══════════════════════════════════════════
    FAQ ACCORDION
    ═══════════════════════════════════════════ */
 
@@ -52,6 +71,7 @@ function initScrollAnimations() {
    ═══════════════════════════════════════════ */
 
 document.addEventListener("DOMContentLoaded", () => {
+  initVariant();
   initFaq();
   initScrollAnimations();
 });

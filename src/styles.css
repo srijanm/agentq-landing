@@ -108,7 +108,81 @@ body {
   background-color: var(--color-sage-wash);
 }
 
-/* Hero variant classes removed — single hero in Astro */
+/* Hero variants — hidden by default, shown via JS */
+.hero-variant {
+  display: none;
+}
+.hero-variant.active {
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   VIDEO PLACEHOLDERS
+   ═══════════════════════════════════════════ */
+
+.video-placeholder {
+  border: 2px dashed var(--color-cool-light);
+  border-radius: var(--radius-container);
+  background: var(--color-sage-surface);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder-inner {
+  text-align: center;
+  color: var(--color-stone);
+}
+
+.video-embed-placeholder {
+  border: 2px dashed var(--color-cool-light);
+  border-radius: var(--radius-container);
+  background: var(--color-sage-surface);
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 560px;
+}
+
+.video-embed-inner {
+  text-align: center;
+  color: var(--color-stone);
+}
+
+/* ═══════════════════════════════════════════
+   TESTIMONIAL CARDS
+   ═══════════════════════════════════════════ */
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-sage-wash);
+  border: 1.5px solid var(--color-warm-black);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-forest);
+  box-shadow: 0 2px 12px rgba(0, 119, 69, 0.08);
+}
+
+.testimonial-photo {
+  margin-bottom: 16px;
+}
+
+.testimonial-photo-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-sage-surface);
+  border: 2px dashed var(--color-cool-light);
+}
 
 /* ═══════════════════════════════════════════
    TYPOGRAPHY

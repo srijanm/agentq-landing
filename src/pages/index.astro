@@ -7,17 +7,32 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
 <BaseLayout>
 
   <!-- ═══════════════════════════════════════════
-       HERO SECTION
+       HERO SECTION — 3 Variants (default: outcome)
        ═══════════════════════════════════════════ -->
   <section aria-label="Hero">
     <div class="min-h-[90svh] flex items-center pt-16">
       <div class="max-w-[1280px] mx-auto px-5 md:px-10 py-12 w-full">
         <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
-            <h1 class="type-display text-warm-black mb-5"><span class="text-forest">Launch</span> production-ready software in days, not&nbsp;months.</h1>
-            <p class="type-h3 text-warm-black mb-6 max-w-[576px]">The world's first <span class="text-forest">agentic engineering</span> platform with on-demand <span class="text-forest">developer&nbsp;assist</span>.</p>
+            <!-- Variant 1: Pain-based -->
+            <div id="hero-v1" class="hero-variant">
+              <h1 class="type-display text-warm-black mb-5">You built the demo. Now <span class="text-forest">launch</span> your&nbsp;product.</h1>
+              <p class="type-h3 text-warm-black mb-6 max-w-[576px]">Production-ready apps in days. Clean code you own. A dev team when you need&nbsp;one.</p>
+            </div>
 
-            <!-- Animated process flow -->
+            <!-- Variant 2: Outcome-based (default) -->
+            <div id="hero-v2" class="hero-variant">
+              <h1 class="type-display text-warm-black mb-5"><span class="text-forest">Bespoke software,</span> just for your business&nbsp;needs.</h1>
+              <p class="type-h3 text-warm-black mb-6 max-w-[576px]">Custom apps ready to launch in days, not months. Supercharged AI written code. A dev team when you need&nbsp;one.</p>
+            </div>
+
+            <!-- Variant 3: Attacking VC -->
+            <div id="hero-v3" class="hero-variant">
+              <h1 class="type-display text-warm-black mb-5">What got you here won't get you&nbsp;<span class="text-forest">there.</span></h1>
+              <p class="type-h3 text-warm-black mb-6 max-w-[576px]">Vibecoding got you 80% of the way. We'll ensure you cover the&nbsp;rest.</p>
+            </div>
+
+            <!-- 4-step flow (shared across variants) -->
             <div class="process-flow mb-8">
               <div class="process-step" style="--step-delay: 0.2s">
                 <span class="process-num">1</span>
@@ -42,7 +57,16 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             </a>
           </div>
           <div class="hidden lg:block" aria-hidden="true">
-            <img src="/images/hero.png" alt="AgentQ platform" class="w-full h-auto rounded-card hero-img">
+            <!-- Placeholder for platform video/GIF — replace with looping build-flow video -->
+            <div class="video-placeholder">
+              <div class="video-placeholder-inner">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                  <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                  <polygon points="20,16 36,24 20,32" fill="currentColor" opacity="0.3"/>
+                </svg>
+                <p class="type-body-sm text-stone mt-3">Platform build-flow video<br>10–12 sec loop</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -54,7 +78,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
        ═══════════════════════════════════════════ -->
   <section id="problem" class="py-16 md:py-20 fade-in-section" aria-labelledby="problem-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <h2 id="problem-heading" class="type-h2 text-warm-black mb-10 md:mb-12 max-w-[672px]">Vibecoding helped you build your app.<br>It just wasn't ready to&nbsp;ship.</h2>
+      <h2 id="problem-heading" class="type-h2 text-warm-black mb-10 md:mb-12 max-w-[672px]">You got 80% there.<br>The last 20% broke&nbsp;everything.</h2>
 
       <div class="grid sm:grid-cols-2 gap-4">
         <!-- Pain Card 1 -->
@@ -63,8 +87,8 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             <img src="/images/2.png" alt="" class="h-full w-full object-cover">
           </div>
           <div class="problem-card-text">
-            <h3 class="type-h4 mb-2">Built, but not production-grade.</h3>
-            <p class="type-body text-warm-mid">Your app works as a demo, but breaks with real users. Auth has gaps. Payments fail. You've built something which works as a demo, but isn't ready to&nbsp;launch.</p>
+            <h3 class="type-h4 mb-2">The demo works. Real users break&nbsp;it.</h3>
+            <p class="type-body text-warm-mid">Login fails on edge cases. Payments succeed in test mode and fail in production. What you showed stakeholders isn't what your customers&nbsp;experience.</p>
           </div>
         </div>
 
@@ -74,8 +98,8 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             <img src="/images/3.png" alt="" class="h-full w-full object-cover">
           </div>
           <div class="problem-card-text">
-            <h3 class="type-h4 mb-2">Unsecure code. Toy databases.</h3>
-            <p class="type-body text-warm-mid">AI gave you a shared SQLite instance for a backend, no role-based access &amp; no encryption. The security is an afterthought &amp; the architecture is not&nbsp;scalable.</p>
+            <h3 class="type-h4 mb-2">Shared infrastructure. Zero&nbsp;security.</h3>
+            <p class="type-body text-warm-mid">No dedicated database. No access control. No encryption. Your customer data is one misconfiguration away from&nbsp;exposure.</p>
           </div>
         </div>
 
@@ -85,8 +109,8 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             <img src="/images/4.png" alt="" class="h-full w-full object-cover">
           </div>
           <div class="problem-card-text">
-            <h3 class="type-h4 mb-2">Code nobody can read, debug, or hand&nbsp;off.</h3>
-            <p class="type-body text-warm-mid">AI wrote thousands of lines of spaghetti code. When something breaks, you can't find the problem because even if you bring a developer, they can't understand&nbsp;it.</p>
+            <h3 class="type-h4 mb-2">Code you can't own, read, or hand&nbsp;off.</h3>
+            <p class="type-body text-warm-mid">AI-generated spaghetti that no developer can pick up. When it breaks, you're stuck&nbsp;&mdash; and so is anyone you hire to&nbsp;help.</p>
           </div>
         </div>
 
@@ -96,21 +120,43 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             <img src="/images/5.png" alt="" class="h-full w-full object-cover">
           </div>
           <div class="problem-card-text">
-            <h3 class="type-h4 mb-2">Credits gone. No one to&nbsp;call.</h3>
-            <p class="type-body text-warm-mid">Every fix creates a new bug. Every new bug burns more credits. The AI loops on the same error &amp; there's no support team &amp; no one to&nbsp;call.</p>
+            <h3 class="type-h4 mb-2">Credits burned. Nobody to turn&nbsp;to.</h3>
+            <p class="type-body text-warm-mid">Every fix creates a new bug. The AI loops on the same error. And there's no one on the other side to help you figure it&nbsp;out.</p>
           </div>
         </div>
+      </div>
+
+      <div class="problem-resolve mt-6">
+        <p class="type-body-lg text-forest font-medium">There's a long way between built and launched. That's where we come&nbsp;in.</p>
       </div>
 
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 3: HOW AGENTQ WORKS
+       SECTION 3: VIDEO EMBED
+       ═══════════════════════════════════════════ -->
+  <section id="video" class="py-16 md:py-20 fade-in-section" aria-labelledby="video-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="video-heading" class="type-h2 text-warm-black mb-10 text-center">This is what closing that gap looks&nbsp;like.</h2>
+      <div class="video-embed-placeholder">
+        <div class="video-embed-inner">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+            <polygon points="26,20 48,32 26,44" fill="currentColor" opacity="0.2"/>
+          </svg>
+          <p class="type-body text-stone mt-4">Product walkthrough video<br><span class="type-body-sm">Max 45 seconds &middot; Auto-play</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: HOW AGENTQ WORKS
        ═══════════════════════════════════════════ -->
   <section id="how-it-works" class="py-16 md:py-20 fade-in-section" aria-labelledby="how-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <h2 id="how-heading" class="type-h2 text-warm-black mb-12 max-w-[768px]">Welcome to the era of Agentic engineering with on-demand developer assistance.<br><span class="block mt-3">So you can launch, not just&nbsp;build.</span></h2>
+      <h2 id="how-heading" class="type-h2 text-warm-black mb-12 max-w-[768px]">From idea to launched&nbsp;product.</h2>
 
       <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14">
         <!-- Left: Steps -->
@@ -129,7 +175,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
               <span class="type-overline text-warm-black font-bold shrink-0">01</span>
               <h3 class="type-h4">Describe your product.</h3>
             </div>
-            <p class="type-body text-warm-mid ml-8">Tell us what you need. A customer portal, an internal tool, a marketplace, a SaaS app&nbsp;&mdash; whatever it is. Our product manager agent collaborates with you to refine your requirements into a clear build&nbsp;plan.</p>
+            <p class="type-body text-warm-mid ml-8">Tell us what you need; a customer portal, a booking system, a marketplace, a SaaS app. Our PM agent works with you to turn your vision into a clear build&nbsp;plan.</p>
           </div>
 
           <!-- Step 2 -->
@@ -138,20 +184,20 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
               <span class="type-overline text-warm-black font-bold shrink-0">02</span>
               <h3 class="type-h4">AI agents build it.</h3>
             </div>
-            <p class="type-body text-warm-mid ml-8">A swarm of specialized AI agents gets to work. Project manager breaks requirements into tasks. Backend developer designs your database schemas and APIs. Frontend developer builds responsive UI. Code auditor reviews every line for security and best practices.</p>
+            <p class="type-body text-warm-mid ml-8">A team of specialized AI agents gets to work. Backend developer designs your database and APIs. Frontend developer builds the UI. Code auditor reviews every&nbsp;line.</p>
           </div>
 
           <!-- Step 3 -->
           <div class="layer-ai pl-6 pb-8">
             <div class="flex items-baseline gap-3 mb-2">
               <span class="type-overline text-warm-black font-bold shrink-0">03</span>
-              <h3 class="type-h4">On-demand Developer Assist.</h3>
+              <h3 class="type-h4">Real developers step in.</h3>
             </div>
             <ul class="type-body text-warm-mid ml-8 space-y-2 pb-2">
-              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> Complex integration? A real engineer steps in.</li>
-              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> Payment gateway or third-party API? Wired up by experts.</li>
-              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> Architecture review before go-live? Done.</li>
-              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> Not reviewing from a distance. Working alongside you.</li>
+              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> Complex integrations? Real engineers handle it.</li>
+              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> Payment gateway? Wired by experts.</li>
+              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> Architecture reviews to solve for scalability? Done.</li>
+              <li class="flex items-start gap-2"><span class="text-warm-black shrink-0 mt-1">&#10003;</span> No reviewing from a distance. Always working alongside you.</li>
             </ul>
           </div>
 
@@ -159,13 +205,13 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           <div class="card mt-6" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
             <div class="flex items-baseline gap-3 mb-2">
               <span class="type-overline text-white font-bold shrink-0">04</span>
-              <h3 class="type-h4 text-white">Launch.</h3>
+              <h3 class="type-h4 text-white">You launch.</h3>
             </div>
             <ul class="type-body text-white/80 ml-8 space-y-2">
               <li class="flex items-start gap-2"><span class="shrink-0 mt-1">&#10003;</span> One-click deployment</li>
               <li class="flex items-start gap-2"><span class="shrink-0 mt-1">&#10003;</span> Dedicated database &amp; enterprise security</li>
               <li class="flex items-start gap-2"><span class="shrink-0 mt-1">&#10003;</span> Clean code you own completely</li>
-              <li class="flex items-start gap-2"><span class="shrink-0 mt-1">&#10003;</span> Launched in days, not months</li>
+              <li class="flex items-start gap-2"><span class="shrink-0 mt-1">&#10003;</span> Live in days, not months</li>
             </ul>
           </div>
         </div>
@@ -181,35 +227,35 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 4: DEVELOPER ASSIST
+       SECTION 5: DEVELOPER ASSIST
        ═══════════════════════════════════════════ -->
   <section id="developer-assist" class="py-16 md:py-20 fade-in-section" aria-labelledby="devassist-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <h2 id="devassist-heading" class="type-h2 text-warm-black mb-4 max-w-[576px]">Never stuck. Never&nbsp;alone.</h2>
-      <p class="type-body-lg text-warm-mid mb-12 max-w-[768px]">Every AgentQ plan includes Developer Assist&nbsp;&mdash; on-demand access to real engineering veterans, directly in your workflow. Not a chatbot. Not a community forum. Real developers who understand your codebase and can step in when it&nbsp;matters.</p>
+      <p class="type-body-lg text-warm-mid mb-12 max-w-[768px]">All AgentQ plans include Developer Assist&nbsp;&mdash; a way to include real engineers in your workflow. No chatbots. No forums. Real engineers who understand your project and step in when it&nbsp;matters.</p>
 
       <!-- Capability Cards -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
         <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
           <h4 class="type-h4 mb-2 text-white">Architecture &amp; planning</h4>
-          <p class="type-body text-white/80">Get expert guidance on how to structure your app so it scales. Database design, API architecture, system design&nbsp;&mdash; the decisions that are invisible until they go&nbsp;wrong.</p>
+          <p class="type-body text-white/80">How should your app be structured so it scales? Database design, API layout, system architecture&nbsp;&mdash; the decisions that are invisible until they go&nbsp;wrong.</p>
         </div>
         <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
           <h4 class="type-h4 mb-2 text-white">Integrations</h4>
-          <p class="type-body text-white/80">Connect payment gateways, CRMs, analytics tools, or any third-party API with expert guidance. Stripe, Razorpay, HubSpot, Segment&nbsp;&mdash; if it has an API, we help you wire it&nbsp;up.</p>
+          <p class="type-body text-white/80">Stripe, Razorpay, HubSpot, Segment&nbsp;&mdash; if it has an API, we help you wire it up. Payment gateways, CRMs, analytics tools, any third-party&nbsp;service.</p>
         </div>
         <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
-          <h4 class="type-h4 mb-2 text-white">Code review</h4>
-          <p class="type-body text-white/80">Get your code professionally reviewed, optimized, and hardened before it goes live. Security audit, performance tuning, and best-practice enforcement.</p>
+          <h4 class="type-h4 mb-2 text-white">Code review &amp; security</h4>
+          <p class="type-body text-white/80">Professional review and optimisation before you go live. Security audit. Performance tuning. Best-practice&nbsp;enforcement.</p>
         </div>
         <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
           <h4 class="type-h4 mb-2 text-white">Deployment &amp; go-live</h4>
-          <p class="type-body text-white/80">Get your code deployed to production with confidence. One-click deployment backed by a developer who's verified everything works. No surprises on launch&nbsp;day.</p>
+          <p class="type-body text-white/80">Deploy to production with confidence. A developer verifies everything works. No surprises on launch&nbsp;day.</p>
         </div>
       </div>
 
       <!-- Tier Cards -->
-      <h3 class="section-label text-warm-mid mb-5">Developer Assist tiers</h3>
+      <h3 class="section-label text-warm-mid mb-5">Support that scales with you.</h3>
       <div class="grid md:grid-cols-3 gap-4 mb-10">
         <div class="tier-card">
           <p class="type-overline text-stone mb-3">Standard</p>
@@ -219,19 +265,19 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div class="tier-card-featured tier-card">
           <p class="type-overline text-forest mb-3">Priority</p>
           <h4 class="type-h4 mb-2">Faster response. Direct access.</h4>
-          <p class="type-body" style="color: var(--color-stone);">Direct access to senior developers. For founders moving to production and handling real&nbsp;customers.</p>
+          <p class="type-body" style="color: var(--color-stone);">Direct access to senior developers with faster turnaround. For founders handling real customers in&nbsp;production.</p>
         </div>
         <div class="tier-card">
           <p class="type-overline text-stone mb-3">Enterprise</p>
           <h4 class="type-h4 mb-2">Solutions architects, ground up.</h4>
-          <p class="type-body text-warm-mid">Solutions architects help with requirement gathering, scoping, and building from the ground up. For growing businesses with complex&nbsp;needs.</p>
+          <p class="type-body text-warm-mid">Help with requirement gathering, scoping, and building complex multi-layered systems. For growing businesses with serious operational&nbsp;needs.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 5: WHAT SHIPS BY DEFAULT
+       SECTION 6: WHAT SHIPS BY DEFAULT
        ═══════════════════════════════════════════ -->
   <section id="what-ships" class="py-16 md:py-20 fade-in-section" aria-labelledby="ships-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
@@ -242,7 +288,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div class="ships-card">
           <div class="ships-card-text">
             <h3 class="type-h4 mb-2 text-forest">Dedicated PostgreSQL database</h3>
-            <p class="type-body text-warm-mid">Secure, relational infrastructure that scales with your&nbsp;business.</p>
+            <p class="type-body text-warm-mid">Your own database. Not shared infrastructure. Secure, relational, and built to scale with your&nbsp;business.</p>
           </div>
           <div class="ships-card-img" aria-hidden="true">
             <img src="/images/postgres.png" alt="" class="h-full w-full object-cover">
@@ -253,7 +299,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div class="ships-card">
           <div class="ships-card-text">
             <h3 class="type-h4 mb-2 text-forest">Role-based access control</h3>
-            <p class="type-body text-warm-mid">Built in from day one. Not bolted on after a data&nbsp;leak.</p>
+            <p class="type-body text-warm-mid">Built in from day one. Control who sees what across your entire application. Not bolted on after a data&nbsp;leak.</p>
           </div>
           <div class="ships-card-img" aria-hidden="true">
             <img src="/images/rbac.png" alt="" class="h-full w-full object-cover">
@@ -264,7 +310,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div class="ships-card">
           <div class="ships-card-text">
             <h3 class="type-h4 mb-2 text-forest">Enterprise security</h3>
-            <p class="type-body text-warm-mid">XSS protection. SQL injection prevention. DoS rate&nbsp;limiting.</p>
+            <p class="type-body text-warm-mid">XSS protection. SQL injection prevention. DoS rate limiting. Input validation. Secure headers. Your customer data is protected from&nbsp;launch.</p>
           </div>
           <div class="ships-card-img" aria-hidden="true">
             <img src="/images/enterprise.png" alt="" class="h-full w-full object-cover">
@@ -275,7 +321,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div class="ships-card">
           <div class="ships-card-text">
             <h3 class="type-h4 mb-2 text-forest">Type-safe TypeScript</h3>
-            <p class="type-body text-warm-mid">Clean, documented, maintainable code you can hand to a&nbsp;developer.</p>
+            <p class="type-body text-warm-mid">Clean, documented, maintainable code across frontend, backend, and database layer. Hand it to any developer. They'll understand&nbsp;it.</p>
           </div>
           <div class="ships-card-img" aria-hidden="true">
             <img src="/images/ts.png" alt="" class="h-full w-full object-cover">
@@ -286,7 +332,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div class="ships-card">
           <div class="ships-card-text">
             <h3 class="type-h4 mb-2 text-forest">One-click deployment</h3>
-            <p class="type-body text-warm-mid">Deno Deploy with Neon PostgreSQL and Cloudflare R2. Zero DevOps on your&nbsp;end.</p>
+            <p class="type-body text-warm-mid">Deno Deploy with Neon PostgreSQL and Cloudflare R2. Zero DevOps on your end. Live from the get&nbsp;go.</p>
           </div>
           <div class="ships-card-img" aria-hidden="true">
             <img src="/images/deploy.png" alt="" class="h-full w-full object-cover">
@@ -297,7 +343,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div class="ships-card">
           <div class="ships-card-text">
             <h3 class="type-h4 mb-2 text-forest">Full code ownership</h3>
-            <p class="type-body text-warm-mid">Hand your code to your developer. Move it anywhere. It's&nbsp;yours.</p>
+            <p class="type-body text-warm-mid">Your code is yours. Move it anywhere. Hand it to any team. No lock-in. No proprietary&nbsp;platforms.</p>
           </div>
           <div class="ships-card-img" aria-hidden="true">
             <img src="/images/own.png" alt="" class="h-full w-full object-cover">
@@ -308,53 +354,51 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 6: WHO THIS IS FOR
+       SECTION 7: EVALS
        ═══════════════════════════════════════════ -->
-  <section id="who-for" class="py-16 md:py-20 fade-in-section" aria-labelledby="who-heading">
+  <section id="evals" class="py-16 md:py-20 fade-in-section" aria-labelledby="evals-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <h2 id="who-heading" class="type-h2 text-warm-black mb-10 max-w-[672px]">Built for people who build businesses, not&nbsp;software.</h2>
+      <h2 id="evals-heading" class="type-h2 text-warm-black mb-10 max-w-[672px]">Independently tested. Measurably&nbsp;better.</h2>
 
-      <div class="space-y-4">
-        <div class="who-row">
-          <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
-            <h3 class="type-h4 text-white mb-2">Founders with a product&nbsp;idea</h3>
-            <p class="type-body text-white/80">You have the vision. You've tried the AI tools. They got you 70% there. AgentQ gets you the rest of the way&nbsp;&mdash; from idea to production-ready software you&nbsp;own.</p>
+      <div class="grid lg:grid-cols-[2fr_1fr] gap-6">
+        <!-- 2/3: Proof points -->
+        <div class="space-y-4">
+          <div class="card">
+            <h3 class="type-h4 mb-2">97.7% of requirements captured on the first&nbsp;attempt.</h3>
+            <p class="type-body text-warm-mid">When you describe your product, AgentQ doesn't skip things. The next closest platform captured 57%. Most missed nearly half of what was asked&nbsp;for.</p>
           </div>
-          <div class="who-row-img hidden md:block">
-            <img src="/images/founders.png" alt="" class="w-full h-full object-cover rounded-card">
+          <div class="card">
+            <h3 class="type-h4 mb-2">12 hours to production-ready.</h3>
+            <p class="type-body text-warm-mid">Apps built with AgentQ needed 12 hours of developer work to reach full production readiness. The next closest platform needed 26. The worst needed&nbsp;60.</p>
+          </div>
+          <div class="card">
+            <h3 class="type-h4 mb-2">15 questions asked before a single line of&nbsp;code.</h3>
+            <p class="type-body text-warm-mid">AgentQ works like a good product manager; it figures out what you actually need before it builds. Some platforms asked zero questions and started building&nbsp;immediately.</p>
+          </div>
+          <div class="card">
+            <h3 class="type-h4 mb-2">96% accuracy. What we said was built, was&nbsp;built.</h3>
+            <p class="type-body text-warm-mid">Some platforms claim features are complete when they aren't. One showed 35% of features as built when they weren't actually working. AgentQ's accuracy was&nbsp;96%.</p>
           </div>
         </div>
 
-        <div class="who-row">
-          <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
-            <h3 class="type-h4 text-white mb-2">Solopreneurs and small business&nbsp;owners</h3>
-            <p class="type-body text-white/80">You need software that works for your business. Not a project that turns you into a part-time developer. Describe what you need. We build it so it works for real customers with real&nbsp;money.</p>
-          </div>
-          <div class="who-row-img hidden md:block">
-            <img src="/images/SME.png" alt="" class="w-full h-full object-cover rounded-card">
-          </div>
-        </div>
-
-        <div class="who-row">
-          <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
-            <h3 class="type-h4 text-white mb-2">Teams that need to move&nbsp;fast</h3>
-            <p class="type-body text-white/80">You need agency-grade quality without the agency timeline. AgentQ delivers production-ready software with on-demand developer assistance built in. Explain your requirements and we&nbsp;go.</p>
-          </div>
-          <div class="who-row-img hidden md:block">
-            <img src="/images/teams.png" alt="" class="w-full h-full object-cover rounded-card">
-          </div>
+        <!-- 1/3: Technical summary -->
+        <div class="card" style="background: var(--color-warm-black); border-color: var(--color-warm-black); align-self: start;">
+          <h3 class="type-h4 text-off-white mb-4">For the technical details</h3>
+          <p class="type-body text-stone mb-6">AgentQ was evaluated across 68 metrics against 5 leading AI coding platforms using the QwikBuild-Bench framework. Highest score in engineering, backend infrastructure, security, and requirement&nbsp;capture.</p>
+          <a href="/evals" class="type-body font-medium text-forest hover:text-forest-hover transition-colors">
+            Read the full evaluation <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 7: THE MATH / COMPARISON
+       SECTION 8: COMPARISON TABLE
        ═══════════════════════════════════════════ -->
   <section id="the-math" class="py-16 md:py-20 fade-in-section" aria-labelledby="math-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
 
-      <!-- Part A: Comparison -->
       <h2 id="math-heading" class="type-h2 text-warm-black mb-10 md:mb-12">The cost of the&nbsp;alternatives.</h2>
 
       <!-- Desktop Table -->
@@ -362,7 +406,7 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <table class="w-full border-separate border-spacing-0" role="table">
           <thead>
             <tr>
-              <th class="text-left type-body font-medium pb-4 pr-6 border-b-2 border-warm-black/10" style="width: 18%"></th>
+              <th class="text-left type-body font-medium pb-4 pr-6 border-b-2 border-warm-black/10" style="width: 16%"></th>
               <th class="text-left type-body font-medium pb-4 px-6 border-b-2 border-warm-black/10">AI Builders</th>
               <th class="text-left type-body font-medium pb-4 px-8 border-b-2 border-forest comparison-col-highlight rounded-t-card">
                 AgentQ
@@ -396,16 +440,23 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             <tr>
               <td class="py-4 pr-6 type-body font-medium border-b border-warm-black/5">Dev support</td>
               <td class="py-4 px-6 type-body border-b border-warm-black/5 text-warm-mid">None</td>
-              <td class="py-4 px-8 type-body border-b border-forest/10 comparison-col-highlight font-medium">On-demand, built in</td>
+              <td class="py-4 px-8 type-body border-b border-forest/10 comparison-col-highlight font-medium">Built into every plan</td>
               <td class="py-4 px-6 type-body border-b border-warm-black/5 text-warm-mid">Full team (at full price)</td>
               <td class="py-4 px-6 type-body border-b border-warm-black/5 text-warm-mid">You are the manager</td>
             </tr>
             <tr>
-              <td class="py-4 pr-6 type-body font-medium">The tradeoff</td>
-              <td class="py-4 px-6 type-body text-warm-mid">Hits a wall at production</td>
-              <td class="py-4 px-8 type-body comparison-col-highlight font-medium rounded-b-card">&mdash;</td>
-              <td class="py-4 px-6 type-body text-warm-mid">Expensive and slow</td>
-              <td class="py-4 px-6 type-body text-warm-mid">Expensive and slow</td>
+              <td class="py-4 pr-6 type-body font-medium border-b border-warm-black/5">Time to launch</td>
+              <td class="py-4 px-6 type-body border-b border-warm-black/5 text-warm-mid">Fast to start, months to finish</td>
+              <td class="py-4 px-8 type-body border-b border-forest/10 comparison-col-highlight font-medium">Days</td>
+              <td class="py-4 px-6 type-body border-b border-warm-black/5 text-warm-mid">Months</td>
+              <td class="py-4 px-6 type-body border-b border-warm-black/5 text-warm-mid">Months to hire, then months to build</td>
+            </tr>
+            <tr>
+              <td class="py-4 pr-6 type-body font-medium">The reality</td>
+              <td class="py-4 px-6 type-body text-warm-mid">Breaks when real users show up</td>
+              <td class="py-4 px-8 type-body comparison-col-highlight font-medium rounded-b-card">Ships and scales</td>
+              <td class="py-4 px-6 type-body text-warm-mid">Works, but the cost and time hurt</td>
+              <td class="py-4 px-6 type-body text-warm-mid">Works, but the cost and time hurt</td>
             </tr>
           </tbody>
         </table>
@@ -420,7 +471,9 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right font-medium">$200/mo</dd></div>
             <div class="flex justify-between"><dt class="font-medium">Skill required</dt><dd class="text-right">None</dd></div>
             <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right font-medium">Production-ready</dd></div>
-            <div class="flex justify-between"><dt class="font-medium">Dev support</dt><dd class="text-right font-medium">On-demand, built in</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Dev support</dt><dd class="text-right font-medium">Built into every plan</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Time to launch</dt><dd class="text-right font-medium">Days</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The reality</dt><dd class="text-right font-medium">Ships and scales</dd></div>
           </dl>
         </div>
         <div class="card">
@@ -428,7 +481,8 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           <dl class="space-y-2 type-body">
             <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right text-warm-mid">$20&ndash;$100/mo</dd></div>
             <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right text-warm-mid">Demo-ready</dd></div>
-            <div class="flex justify-between"><dt class="font-medium">Tradeoff</dt><dd class="text-right text-warm-mid">Hits a wall at production</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Time to launch</dt><dd class="text-right text-warm-mid">Fast to start, months to finish</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The reality</dt><dd class="text-right text-warm-mid">Breaks when real users show up</dd></div>
           </dl>
         </div>
         <div class="card">
@@ -436,7 +490,8 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           <dl class="space-y-2 type-body">
             <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right text-warm-mid">$5K&ndash;$50K per project</dd></div>
             <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right text-warm-mid">Production-ready</dd></div>
-            <div class="flex justify-between"><dt class="font-medium">Tradeoff</dt><dd class="text-right text-warm-mid">Expensive and slow</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Time to launch</dt><dd class="text-right text-warm-mid">Months</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The reality</dt><dd class="text-right text-warm-mid">Works, but the cost and time hurt</dd></div>
           </dl>
         </div>
         <div class="card">
@@ -444,53 +499,9 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           <dl class="space-y-2 type-body">
             <div class="flex justify-between"><dt class="font-medium">Cost</dt><dd class="text-right text-warm-mid">$80K+/year</dd></div>
             <div class="flex justify-between"><dt class="font-medium">Output</dt><dd class="text-right text-warm-mid">Production-ready</dd></div>
-            <div class="flex justify-between"><dt class="font-medium">Tradeoff</dt><dd class="text-right text-warm-mid">Expensive and slow</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">Time to launch</dt><dd class="text-right text-warm-mid">Months to hire, then months to build</dd></div>
+            <div class="flex justify-between"><dt class="font-medium">The reality</dt><dd class="text-right text-warm-mid">Works, but the cost and time hurt</dd></div>
           </dl>
-        </div>
-      </div>
-
-      <!-- Part B: Pricing -->
-      <div class="border-t-2 border-warm-black/10 pt-12 md:pt-16">
-        <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
-          <div>
-            <h2 class="type-h2 text-warm-black mb-8">Simple pricing. Everything&nbsp;included.</h2>
-
-            <div class="mb-6">
-              <span class="price-amount">$600</span>
-              <span class="price-period"> / quarter</span>
-            </div>
-            <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
-
-            <ul class="space-y-3 type-body">
-              <li class="flex items-start gap-3">
-                <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-                <span>Agentic engineering&nbsp;&mdash; multi-agent AI build system</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-                <span>Dedicated database and hosting</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-                <span>Enterprise security by default</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-                <span>On-demand Developer Assist&nbsp;&mdash; real engineers in your workflow</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-                <span>Full code ownership</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-                <span>One-click deployment</span>
-              </li>
-            </ul>
-          </div>
-          <div class="hidden lg:block" style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); overflow: hidden;">
-            <img src="/images/pricing.png" alt="" class="w-full h-auto">
-          </div>
         </div>
       </div>
 
@@ -498,7 +509,127 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 8: FAQ
+       SECTION 9: TESTIMONIALS + CASE STUDIES
+       ═══════════════════════════════════════════ -->
+  <section id="testimonials" class="py-16 md:py-20 fade-in-section" aria-labelledby="testimonials-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="testimonials-heading" class="type-h2 text-warm-black mb-10">Real products. Real launches. Real&nbsp;outcomes.</h2>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <!-- Testimonial 1 -->
+        <a href="/case-studies/placeholder-1" class="testimonial-card">
+          <div class="testimonial-photo" aria-hidden="true">
+            <div class="testimonial-photo-placeholder"></div>
+          </div>
+          <blockquote class="type-body text-warm-black mb-4">&ldquo;We went from a broken MVP to a launched product in six days. The developer support made the&nbsp;difference.&rdquo;</blockquote>
+          <div class="mt-auto">
+            <p class="type-body font-medium">Alex Rivera</p>
+            <p class="type-body-sm text-stone">CEO, TechFlow</p>
+          </div>
+        </a>
+
+        <!-- Testimonial 2 -->
+        <a href="/case-studies/placeholder-2" class="testimonial-card">
+          <div class="testimonial-photo" aria-hidden="true">
+            <div class="testimonial-photo-placeholder"></div>
+          </div>
+          <blockquote class="type-body text-warm-black mb-4">&ldquo;We spent three months on Lovable and couldn't ship. AgentQ got us live in a&nbsp;week.&rdquo;</blockquote>
+          <div class="mt-auto">
+            <p class="type-body font-medium">Priya Sharma</p>
+            <p class="type-body-sm text-stone">Founder, BookingStack</p>
+          </div>
+        </a>
+
+        <!-- Testimonial 3 -->
+        <a href="/case-studies/placeholder-3" class="testimonial-card">
+          <div class="testimonial-photo" aria-hidden="true">
+            <div class="testimonial-photo-placeholder"></div>
+          </div>
+          <blockquote class="type-body text-warm-black mb-4">&ldquo;I'm not technical. AgentQ gave me production-ready software and a developer I could actually talk&nbsp;to.&rdquo;</blockquote>
+          <div class="mt-auto">
+            <p class="type-body font-medium">Marcus Chen</p>
+            <p class="type-body-sm text-stone">Owner, GreenLeaf Supply</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 10: BUILT FOR
+       ═══════════════════════════════════════════ -->
+  <section id="who-for" class="py-16 md:py-20 fade-in-section" aria-labelledby="who-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="who-heading" class="type-h2 text-warm-black mb-10 max-w-[672px]">Built for people who build businesses, not&nbsp;software.</h2>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
+          <h3 class="type-h4 text-white mb-2">Founders with a product&nbsp;idea</h3>
+          <p class="type-body text-white/80">You've tried AI tools. You got 80% there. Now you need to actually launch. AgentQ gets you from demo to a production-ready product you&nbsp;own.</p>
+        </div>
+        <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
+          <h3 class="type-h4 text-white mb-2">Small business owners</h3>
+          <p class="type-body text-white/80">You need software that fits how your business actually runs. Not a generic SaaS with workarounds. Describe what you need. We build it so it works for real&nbsp;customers.</p>
+        </div>
+        <div class="card" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
+          <h3 class="type-h4 text-white mb-2">Teams that need to move&nbsp;fast</h3>
+          <p class="type-body text-white/80">Agency-grade quality without the agency timeline or price tag. Production-ready software with developer support built in. Explain your requirements and we&nbsp;go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 11: PRICING
+       ═══════════════════════════════════════════ -->
+  <section id="pricing" class="py-16 md:py-20 fade-in-section" aria-labelledby="pricing-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-14 items-center">
+        <div>
+          <h2 id="pricing-heading" class="type-h2 text-warm-black mb-8">Simple pricing. Everything&nbsp;included.</h2>
+
+          <div class="mb-6">
+            <span class="price-amount">$600</span>
+            <span class="price-period"> / quarter</span>
+          </div>
+          <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
+
+          <ul class="space-y-3 type-body">
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Agentic engineering&nbsp;&mdash; multi-agent AI build system</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Dedicated database and hosting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Enterprise security by default</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>On-demand Developer Assist&nbsp;&mdash; real engineers in your workflow</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Full code ownership</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>One-click deployment</span>
+            </li>
+          </ul>
+        </div>
+        <div class="hidden lg:block" style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); overflow: hidden;">
+          <img src="/images/pricing.png" alt="" class="w-full h-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 12: FAQ
        ═══════════════════════════════════════════ -->
   <section id="faq" class="py-16 md:py-20 fade-in-section" aria-labelledby="faq-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
@@ -577,22 +708,42 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           </div>
         </div>
 
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Why not just use ChatGPT, Cursor, or Claude Code?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">Those tools are powerful&nbsp;&mdash; for developers. They require you to understand code, debug errors, make architecture decisions, and handle deployment yourself. If you're not technical, you'll hit a wall fast. AgentQ is built for people who want to describe what they need and get working software back, with a real developer when they need&nbsp;one.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Why not hire a freelancer?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="type-body text-warm-mid pb-2">A freelancer who can build production-grade software starts at $5,000 for an MVP and takes weeks. You manage them, review their work, and hope they stick around for fixes. AgentQ costs $200 a month, delivers in days, and the developer support is ongoing. When you need changes next month, the support is still&nbsp;there.</p>
+          </div>
+        </div>
+
       </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 9: CLOSING CTA
+       SECTION 13: FINAL CTA
        ═══════════════════════════════════════════ -->
   <section id="closing-cta" class="py-16 md:py-20 fade-in-section" aria-labelledby="closing-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <div class="grid lg:grid-cols-[1fr_1fr] items-center" style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); overflow: hidden;">
         <div style="padding: 40px;">
-          <h2 id="closing-heading" class="type-h2 text-warm-black mb-4">It's time to launch, not&nbsp;build.</h2>
-          <p class="type-body-lg text-warm-mid mb-8 max-w-[576px]">Build something real. Own your code. Launch with confidence. Scale when you're&nbsp;ready.</p>
+          <h2 id="closing-heading" class="type-h2 text-warm-black mb-4">It's time to&nbsp;ship.</h2>
+          <p class="type-body-lg text-warm-mid mb-8 max-w-[576px]">Build something real. Own your code. Launch with&nbsp;confidence.</p>
           <a href={calendarUrl} class="btn-primary text-lg mb-4">
-            Book a launch call <span aria-hidden="true">&rarr;</span>
+            Book a call <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
         <div class="hidden lg:block h-full">
