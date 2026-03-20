@@ -18,6 +18,60 @@ function initVariant() {
 }
 
 /* ═══════════════════════════════════════════
+   HERO EMAIL VALIDATION
+   ═══════════════════════════════════════════ */
+
+function initHeroForm() {
+  const form = document.getElementById("hero-form");
+  const input = document.getElementById("hero-email");
+  const btn = document.getElementById("hero-cta-btn");
+  const error = document.getElementById("hero-email-error");
+  if (!form || !input || !btn) return;
+
+  const calendarUrl = btn.dataset.calendarUrl;
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const email = input.value.trim();
+    if (!email || !isValidEmail(email)) {
+      input.classList.add("invalid");
+      if (error) error.style.display = "block";
+      input.focus();
+      return;
+    }
+    input.classList.remove("invalid");
+    if (error) error.style.display = "none";
+    // Valid email — open calendar booking
+    window.open(calendarUrl, "_blank");
+  });
+
+  input.addEventListener("input", () => {
+    input.classList.remove("invalid");
+    if (error) error.style.display = "none";
+  });
+}
+
+/* ═══════════════════════════════════════════
+   HERO SOCIAL PROOF ROTATOR
+   ═══════════════════════════════════════════ */
+
+function initSocialProof() {
+  const items = document.querySelectorAll(".hero-proof-item");
+  if (items.length < 2) return;
+
+  let current = 0;
+  setInterval(() => {
+    items[current].classList.remove("active");
+    current = (current + 1) % items.length;
+    items[current].classList.add("active");
+  }, 4000);
+}
+
+/* ═══════════════════════════════════════════
    FAQ ACCORDION
    ═══════════════════════════════════════════ */
 
@@ -72,6 +126,8 @@ function initScrollAnimations() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initVariant();
+  initHeroForm();
+  initSocialProof();
   initFaq();
   initScrollAnimations();
 });

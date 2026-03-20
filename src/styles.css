@@ -117,6 +117,263 @@ body {
 }
 
 /* ═══════════════════════════════════════════
+   HERO — Centered layout with background
+   ═══════════════════════════════════════════ */
+
+.hero-centered {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.08;
+}
+
+/* Video pill */
+.hero-video-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  background: rgba(0, 119, 69, 0.06);
+  border: 1.5px solid rgba(0, 119, 69, 0.25);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-video-pill:hover {
+  background: rgba(0, 119, 69, 0.1);
+  border-color: rgba(0, 119, 69, 0.5);
+}
+
+.hero-video-pill svg {
+  color: var(--color-forest);
+}
+
+/* Email CTA row */
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-email-input {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  padding: 14px 20px;
+  border: 1.5px solid rgba(28, 24, 20, 0.15);
+  border-right: none;
+  border-radius: var(--radius-button) 0 0 var(--radius-button);
+  background: white;
+  color: var(--color-warm-black);
+  transition: border-color 0.2s ease;
+}
+
+.hero-email-input:focus {
+  outline: none;
+  border-color: var(--color-forest);
+}
+
+.hero-email-input::placeholder {
+  color: var(--color-stone);
+}
+
+.hero-email-input.invalid {
+  border-color: var(--color-signal-red);
+}
+
+.hero-cta-btn {
+  border-radius: 0 var(--radius-button) var(--radius-button) 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .hero-cta-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero-email-input {
+    border-right: 1.5px solid rgba(28, 24, 20, 0.15);
+    border-radius: var(--radius-button);
+    width: 100%;
+  }
+  .hero-cta-btn {
+    border-radius: var(--radius-button);
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Rotating social proof */
+.hero-social-proof {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-proof-item {
+  display: none;
+  text-align: center;
+  animation: proof-fade-in 0.5s ease;
+}
+
+.hero-proof-item.active {
+  display: inline;
+}
+
+@keyframes proof-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════
+   HERO — Animated 3→1 process diagram
+   ═══════════════════════════════════════════ */
+
+.hero-process-diagram {
+  width: 100%;
+  max-width: 800px;
+  margin: 48px auto 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-process-nodes {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.hero-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.025em;
+  padding: 10px 20px;
+  border-radius: var(--radius-button);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: hero-node-appear 0.6s ease forwards;
+  animation-delay: var(--node-delay, 0s);
+}
+
+.hero-node--step {
+  background: white;
+  border: 1.5px solid rgba(28, 24, 20, 0.12);
+  color: var(--color-warm-black);
+  box-shadow: 0 2px 8px rgba(28, 24, 20, 0.06);
+}
+
+.hero-node--final {
+  background: var(--color-forest);
+  border: 2px solid var(--color-forest);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 32px;
+  box-shadow: 0 4px 20px rgba(0, 119, 69, 0.25);
+  animation: hero-node-appear 0.6s ease forwards, hero-final-glow 3s ease-in-out infinite 2s;
+}
+
+.hero-node-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-sage-surface);
+  border: 1.5px solid var(--color-cool-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-warm-mid);
+  flex-shrink: 0;
+}
+
+.hero-node-num--final {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
+.hero-connectors {
+  width: 100%;
+  height: 60px;
+  margin: -4px 0;
+  opacity: 0;
+  animation: hero-connectors-appear 0.8s ease forwards 1.2s;
+}
+
+@keyframes hero-node-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-connectors-appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-final-glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(0, 119, 69, 0.25); }
+  50% { box-shadow: 0 4px 32px rgba(0, 119, 69, 0.4); }
+}
+
+@media (max-width: 767px) {
+  .hero-process-nodes {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-connectors {
+    display: none;
+  }
+  .hero-process-diagram {
+    margin-top: 32px;
+  }
+  .hero-node--final {
+    margin-top: 12px;
+  }
+}
+
+/* ═══════════════════════════════════════════
    VIDEO PLACEHOLDERS
    ═══════════════════════════════════════════ */
 
