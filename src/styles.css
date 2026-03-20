@@ -108,12 +108,7 @@ body {
   background-color: var(--color-sage-wash);
 }
 
-.hero-variant {
-  display: none;
-}
-.hero-variant.active {
-  display: block;
-}
+/* Hero variant classes removed — single hero in Astro */
 
 /* ═══════════════════════════════════════════
    TYPOGRAPHY

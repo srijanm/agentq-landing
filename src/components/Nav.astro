@@ -1,0 +1,22 @@
+---
+const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
+---
+
+<nav id="top-nav" class="top-nav" aria-label="Primary navigation">
+  <div class="max-w-[1280px] mx-auto px-5 md:px-10 flex items-center justify-between h-16">
+    <a href="/" class="logo text-3xl" aria-label="AgentQ home">
+      Agent<span class="logo-q">Q</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#how-it-works" class="nav-link type-body font-medium">How it works</a>
+      <a href="/developer-assist" class="nav-link type-body font-medium">Developer Assist</a>
+      <a href="/#what-ships" class="nav-link type-body font-medium">What ships</a>
+      <a href="/pricing" class="nav-link type-body font-medium">Pricing</a>
+      <a href="/evals" class="nav-link type-body font-medium">Evals</a>
+      <a href="/case-studies" class="nav-link type-body font-medium">Case Studies</a>
+    </div>
+    <a id="nav-cta" href={calendarUrl} class="btn-primary btn-nav">
+      Book a call <span aria-hidden="true">&rarr;</span>
+    </a>
+  </div>
+</nav>
