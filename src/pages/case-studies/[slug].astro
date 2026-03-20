@@ -1,0 +1,218 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
+
+// Static paths for placeholder case studies
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: "edtech-platform" },
+      props: {
+        company: "Placeholder Institute",
+        industry: "EdTech",
+        days: 5,
+        headline: "From WhatsApp groups and spreadsheets to a fully custom management platform.",
+        about: "Placeholder Institute is a coaching institute based in Pune with 3 branches and 400 students. They prepare students for JEE and NEET entrance exams. Before AgentQ, everything ran on WhatsApp groups, Google Sheets, and manual phone calls.",
+        problemP1: "Student attendance was tracked in WhatsApp groups. Test scores lived in Google Sheets that broke every time someone accidentally deleted a row. Fee collection was a phone call to each parent. Teachers at one branch had no idea what was happening at the other two.",
+        problemP2: "They tried building an app with an AI coding tool. The interface looked great. But authentication didn't work, the database couldn't handle multi-branch access, and after three months of burning credits, they still couldn't launch.",
+        problemP3: "The cost: two hours a day per branch on admin work that software should handle. Students falling through the cracks. Parents complaining about missed communication.",
+        solutionIntro: "AgentQ built a custom institute management platform in 5 days.",
+        features: [
+          { title: "Multi-branch dashboard", desc: "Admins see all three branches in one view. Teachers see only their branch and subjects." },
+          { title: "Automated attendance", desc: "Teachers mark attendance on their phone. Missed days get flagged automatically. No more WhatsApp check-ins." },
+          { title: "Test score tracking with leaderboards", desc: "Scores entered once. Cross-branch leaderboards calculated automatically. Students and parents see progress in real time." },
+          { title: "Fee management", desc: "Automated reminders. Payment tracking. No more manual phone calls to parents." },
+          { title: "Role-based access", desc: "Students, teachers, parents, and admins each see exactly what they need. Nothing more." },
+          { title: "Developer Assist in action", desc: "The Razorpay integration for fee payments was wired up by a developer through Dev Assist in under a day." },
+        ],
+        stats: [
+          { number: "5 days", label: "from first conversation to launched product" },
+          { number: "6 hrs/day", label: "saved across three branches on manual admin work" },
+          { number: "400 students", label: "onboarded in the first week" },
+        ],
+        outcomeContext: "The platform went live on a Monday. By Friday, all three branches were using it. The founder hasn't opened the attendance WhatsApp group since.",
+        testimonial: "We spent three months trying to build this with another tool and got nowhere. AgentQ had it live in five days. The developer who helped us wire up the payment system understood exactly what we needed. I'm not a technical person. I didn't have to be.",
+        testimonialName: "Founder Name",
+        testimonialRole: "Founder",
+      },
+    },
+    {
+      params: { slug: "logistics-system" },
+      props: {
+        company: "Placeholder Logistics",
+        industry: "Logistics",
+        days: 7,
+        headline: "Replaced three off-the-shelf tools with one custom system.",
+        about: "Placeholder Logistics is a field service company managing a fleet of 50 technicians across a metro area. They were using three different tools for dispatch, invoicing, and customer communication.",
+        problemP1: "Dispatch was managed in one tool, invoicing in another, and customer communication over email and phone. Nothing talked to each other. Jobs fell through the cracks regularly.",
+        problemP2: "They evaluated SaaS solutions but none fit their specific workflow. They tried an agency that quoted $25,000 and three months. After two months and $15,000, the project was still in design.",
+        problemP3: "The cost: 2 hours a day on manual dispatch, lost jobs from miscommunication, and frustrated technicians working from outdated schedules.",
+        solutionIntro: "AgentQ built a unified field service management platform in 7 days.",
+        features: [
+          { title: "Smart dispatch board", desc: "Drag-and-drop job assignment with technician availability and location awareness." },
+          { title: "Automated invoicing", desc: "Invoices generated automatically when jobs are marked complete. Sent to customers immediately." },
+          { title: "Customer portal", desc: "Customers book, track, and communicate about their service requests in one place." },
+          { title: "Technician mobile app", desc: "Technicians see their schedule, navigate to jobs, and update status from their phone." },
+          { title: "Real-time dashboard", desc: "Operations manager sees all active jobs, technician locations, and daily metrics at a glance." },
+          { title: "Developer Assist in action", desc: "Google Maps integration and real-time location tracking wired up by a developer through Dev Assist." },
+        ],
+        stats: [
+          { number: "7 days", label: "from first conversation to launched product" },
+          { number: "80%", label: "reduction in dispatch time" },
+          { number: "3 tools", label: "replaced with one custom system" },
+        ],
+        outcomeContext: "The team went from juggling three tools to one dashboard. Dispatch time dropped from 2 hours to 15 minutes a day.",
+        testimonial: "We spent $15,000 on an agency and got a design document. AgentQ gave us a working product in a week. The dispatch board alone saves us two hours every morning.",
+        testimonialName: "Operations Lead",
+        testimonialRole: "Operations Manager",
+      },
+    },
+    {
+      params: { slug: "saas-mvp" },
+      props: {
+        company: "Placeholder SaaS",
+        industry: "SaaS",
+        days: 6,
+        headline: "Went from six months of agency delays to a launched MVP.",
+        about: "Placeholder SaaS is an early-stage startup building a project management tool for creative agencies. The founder had a clear vision but no technical co-founder.",
+        problemP1: "The founder spent six months working with a freelance developer on the MVP. Progress was slow, communication was difficult, and the developer eventually became unavailable.",
+        problemP2: "They tried Lovable to rebuild it themselves. The frontend looked good but the backend was broken. Multi-user collaboration didn't work. The database couldn't handle concurrent edits.",
+        problemP3: "Six months of work, $8,000 spent, and still no product to show investors or early customers.",
+        solutionIntro: "AgentQ rebuilt the MVP from scratch in 6 days.",
+        features: [
+          { title: "Real-time collaboration", desc: "Multiple team members editing projects simultaneously with live updates." },
+          { title: "Client portal", desc: "Clients review work, leave feedback, and approve deliverables without email chains." },
+          { title: "Project timeline", desc: "Visual timeline with milestones, dependencies, and automatic deadline tracking." },
+          { title: "Role-based permissions", desc: "Admins, project managers, creatives, and clients each see what they need." },
+          { title: "Stripe billing", desc: "Subscription management and invoicing built in from day one." },
+          { title: "Developer Assist in action", desc: "WebSocket implementation for real-time collaboration built by a senior developer through Dev Assist." },
+        ],
+        stats: [
+          { number: "6 days", label: "from first conversation to launched MVP" },
+          { number: "$8K", label: "previously spent without a launchable product" },
+          { number: "12 users", label: "onboarded in the first two weeks" },
+        ],
+        outcomeContext: "The founder demoed the MVP to three potential investors the week it launched. Two asked for follow-up meetings.",
+        testimonial: "I'm not technical. I spent six months and $8,000 trying to get this built. AgentQ did it in six days. The real-time collaboration feature — the thing my freelancer said would take months — was working on day four.",
+        testimonialName: "Founder Name",
+        testimonialRole: "CEO & Founder",
+      },
+    },
+  ];
+}
+
+const { company, industry, days, headline, about, problemP1, problemP2, problemP3, solutionIntro, features, stats, outcomeContext, testimonial, testimonialName, testimonialRole } = Astro.props;
+---
+
+<BaseLayout title={`${company}: ${headline} | AgentQ Case Study`} description={headline}>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: HEADER
+       ═══════════════════════════════════════════ -->
+  <section class="pt-24 pb-8 md:pt-32 md:pb-12">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="type-body font-medium">{company}</span>
+        <span class="case-study-tag">{industry}</span>
+        <span class="type-body-sm text-stone">&middot; Launched in {days} days</span>
+      </div>
+      <h1 class="type-display text-warm-black mb-8 max-w-[768px]">{headline}</h1>
+      <!-- Hero screenshot placeholder -->
+      <div class="image-placeholder" style="min-height: 400px;">
+        <p class="type-body-sm text-stone">Full-width product screenshot</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: THE COMPANY
+       ═══════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 class="type-h2 text-warm-black mb-4">About {company}</h2>
+      <p class="type-body text-warm-mid max-w-[768px]">{about}</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: THE PROBLEM
+       ═══════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 class="type-h2 text-warm-black mb-6">The challenge.</h2>
+      <div class="max-w-[768px] space-y-4">
+        <p class="type-body text-warm-mid">{problemP1}</p>
+        <p class="type-body text-warm-mid">{problemP2}</p>
+        <p class="type-body text-warm-mid">{problemP3}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: THE SOLUTION
+       ═══════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 class="type-h2 text-warm-black mb-4">What AgentQ built.</h2>
+      <p class="type-body-lg text-warm-mid mb-8 max-w-[768px]">{solutionIntro}</p>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {features.map((f) => (
+          <div class="card">
+            <h3 class="type-h4 mb-2 text-forest">{f.title}</h3>
+            <p class="type-body text-warm-mid">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5: THE OUTCOME
+       ═══════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 class="type-h2 text-warm-black mb-8">The results.</h2>
+
+      <div class="grid sm:grid-cols-3 gap-4 mb-8">
+        {stats.map((s) => (
+          <div class="card text-center">
+            <p class="type-display text-forest mb-2" style="font-size: 36px;">{s.number}</p>
+            <p class="type-body-sm text-warm-mid">{s.label}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="type-body text-warm-mid max-w-[768px]">{outcomeContext}</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6: TESTIMONIAL
+       ═══════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="max-w-[768px] mx-auto text-center">
+        <div class="testimonial-photo-placeholder mx-auto mb-6" style="width: 64px; height: 64px;"></div>
+        <blockquote class="type-h3 text-warm-black mb-6">&ldquo;{testimonial}&rdquo;</blockquote>
+        <p class="type-body font-medium">{testimonialName}</p>
+        <p class="type-body-sm text-stone">{testimonialRole}, {company}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7: CTA
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10 text-center">
+      <h2 class="type-h2 text-warm-black mb-2">Ready to build yours?</h2>
+      <p class="type-body-lg text-warm-mid mb-8">See how AgentQ can help your business launch custom software in&nbsp;days.</p>
+      <a href={calendarUrl} class="btn-primary text-lg">
+        Book a launch call <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

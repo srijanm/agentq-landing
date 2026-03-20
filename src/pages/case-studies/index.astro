@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
+
+const caseStudies = [
+  {
+    slug: "edtech-platform",
+    company: "Placeholder Company",
+    industry: "EdTech",
+    headline: "From WhatsApp groups and spreadsheets to a fully custom management platform.",
+    days: 5,
+  },
+  {
+    slug: "logistics-system",
+    company: "Placeholder Company",
+    industry: "Logistics",
+    headline: "Replaced three off-the-shelf tools with one custom system.",
+    days: 7,
+  },
+  {
+    slug: "saas-mvp",
+    company: "Placeholder Company",
+    industry: "SaaS",
+    headline: "Went from six months of agency delays to a launched MVP.",
+    days: 6,
+  },
+];
+---
+
+<BaseLayout title="Case Studies — Real Products, Real Launches | AgentQ" description="See how founders and business owners used AgentQ to build and launch production-ready software.">
+
+  <!-- ═══════════════════════════════════════════
+       PAGE HEADER
+       ═══════════════════════════════════════════ -->
+  <section class="pt-24 pb-12 md:pt-32 md:pb-16">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h1 class="type-display text-warm-black mb-4">Real products. Real launches. Real&nbsp;outcomes.</h1>
+      <p class="type-h3 text-warm-mid max-w-[672px]">See how founders and business owners used AgentQ to build and launch production-ready&nbsp;software.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CASE STUDY TILES
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="grid md:grid-cols-3 gap-4">
+        {caseStudies.map((cs) => (
+          <a href={`/case-studies/${cs.slug}`} class="case-study-tile">
+            <div class="case-study-thumb">
+              <p class="type-body-sm text-stone">Product screenshot</p>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="type-body font-medium">{cs.company}</span>
+                <span class="case-study-tag">{cs.industry}</span>
+              </div>
+              <p class="type-body text-warm-black mb-3">"{cs.headline}"</p>
+              <div class="flex items-center justify-between">
+                <span class="type-body-sm text-stone">Launched in {cs.days} days</span>
+                <span class="type-body-sm font-medium text-forest">Read the full story &rarr;</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10 text-center">
+      <h2 class="type-h2 text-warm-black mb-4">Ready to be the next&nbsp;one?</h2>
+      <a href={calendarUrl} class="btn-primary text-lg mt-6">
+        Book a launch call <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

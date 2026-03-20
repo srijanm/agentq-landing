@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
+---
+
+<BaseLayout title="Contact — Get in Touch | AgentQ" description="Book a call or send us a message. We'd love to hear about what you're building.">
+
+  <section class="pt-24 pb-16 md:pt-32 md:pb-20">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="max-w-[672px] mx-auto text-center">
+        <h1 class="type-display text-warm-black mb-4">Let's&nbsp;talk.</h1>
+        <p class="type-h3 text-warm-mid mb-12">Book a call or send us a message. We'd love to hear about what you're&nbsp;building.</p>
+
+        <a href={calendarUrl} class="btn-primary text-lg mb-12 inline-flex">
+          Book a call <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[560px] mx-auto px-5 md:px-10">
+      <div style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); padding: 40px;">
+        <h2 class="type-h2 text-warm-black mb-8">Send us a message</h2>
+        <form class="space-y-5">
+          <div>
+            <label for="name" class="type-body-sm font-medium text-warm-black mb-1 block">Name</label>
+            <input type="text" id="name" name="name" class="contact-input" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="email" class="type-body-sm font-medium text-warm-black mb-1 block">Email</label>
+            <input type="email" id="email" name="email" class="contact-input" placeholder="you@company.com" required>
+          </div>
+          <div>
+            <label for="message" class="type-body-sm font-medium text-warm-black mb-1 block">What are you building?</label>
+            <textarea id="message" name="message" rows="5" class="contact-input" placeholder="Tell us about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary text-lg w-full justify-center">
+            Send message <span aria-hidden="true">&rarr;</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

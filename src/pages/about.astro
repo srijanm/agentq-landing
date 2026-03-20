@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
+
+const teamMembers = [
+  { name: "Founder Name", role: "Co-founder & CEO", bio: "PLACEHOLDER: Background, what drives them, why they started QwikBuild. 2-3 lines." },
+  { name: "Founder Name", role: "Co-founder & CTO", bio: "PLACEHOLDER: Technical background, what they built before, their approach to the product. 2-3 lines." },
+  { name: "Team Member", role: "Head of Engineering", bio: "PLACEHOLDER: Background, what they're responsible for, one human detail. 2-3 lines." },
+  { name: "Team Member", role: "Lead Dev Assist Engineer", bio: "PLACEHOLDER: Background, what they do day-to-day, one human detail. 2-3 lines." },
+];
+---
+
+<BaseLayout title="About Us — The Team Behind AgentQ" description="We build tools that turn ideas into production software. Meet the team behind AgentQ.">
+
+  <!-- ═══════════════════════════════════════════
+       PAGE HEADER
+       ═══════════════════════════════════════════ -->
+  <section class="pt-24 pb-12 md:pt-32 md:pb-16">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h1 class="type-display text-warm-black mb-4">The team behind&nbsp;AgentQ.</h1>
+      <p class="type-h3 text-warm-mid max-w-[672px]">We build tools that turn ideas into production&nbsp;software.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: THE SHORT VERSION — Stats
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="card text-center">
+          <p class="type-display text-forest mb-2" style="font-size: 36px;">16,000+</p>
+          <p class="type-body-sm text-warm-mid">users across the QwikBuild platform</p>
+        </div>
+        <div class="card text-center">
+          <p class="type-display text-forest mb-2" style="font-size: 36px;">10,000+</p>
+          <p class="type-body-sm text-warm-mid">apps built</p>
+        </div>
+        <div class="card text-center">
+          <p class="type-display text-forest mb-2" style="font-size: 36px;">6,000</p>
+          <p class="type-body-sm text-warm-mid">active builders</p>
+        </div>
+        <div class="card text-center">
+          <p class="type-display text-forest mb-2" style="font-size: 36px;">99%</p>
+          <p class="type-body-sm text-warm-mid">platform uptime</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: THE FOUNDING STORY
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="story-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="story-heading" class="type-h2 text-warm-black mb-8">Why we built&nbsp;this.</h2>
+      <div class="max-w-[768px] space-y-4">
+        <p class="type-body text-warm-mid">[PLACEHOLDER] We watched thousands of non-technical founders try to build software with AI tools. They'd get 70–80% of the way there. Then they'd get stuck. No backend. No security. No one to call. Months of work and credits spent, with nothing they could actually&nbsp;launch.</p>
+        <p class="type-body text-warm-mid">[PLACEHOLDER] The problem wasn't the AI. The AI was fast. The problem was that speed without judgment produces demos, not products. Someone needed to pair AI speed with human&nbsp;expertise.</p>
+        <p class="type-body text-warm-mid">[PLACEHOLDER] So we built AgentQ. An agentic engineering platform where AI agents handle the speed and real developers handle the judgment. One platform. One price. Production-ready software with a human safety net at every&nbsp;step.</p>
+        <p class="type-body text-warm-mid">[PLACEHOLDER] Today, 16,000 users have built over 10,000 apps on the QwikBuild platform. AgentQ is our flagship product. We're just getting&nbsp;started.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: WHAT WE BELIEVE
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="beliefs-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="beliefs-heading" class="type-h2 text-warm-black mb-10">How we think about building&nbsp;software.</h2>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="card">
+          <h3 class="type-h4 mb-2">AI builds fast. Humans make sure it&nbsp;works.</h3>
+          <p class="type-body text-warm-mid">Speed matters. So does judgment. We pair both because neither alone is&nbsp;enough.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-2">Production-ready is the starting&nbsp;point.</h3>
+          <p class="type-body text-warm-mid">A demo that breaks with real users helps nobody. Everything we ship is built to handle real customers with real&nbsp;data.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-2">You should own what you&nbsp;build.</h3>
+          <p class="type-body text-warm-mid">Your code. Your database. Your infrastructure. Move it anywhere. Hand it to anyone. No&nbsp;lock-in.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-2">Honesty over&nbsp;hype.</h3>
+          <p class="type-body text-warm-mid">We publish our evaluation scores, including the ones where we fall short. We'd rather earn trust than manufacture&nbsp;it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: THE TEAM
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="team-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="team-heading" class="type-h2 text-warm-black mb-10">The people behind the&nbsp;platform.</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {teamMembers.map((member) => (
+          <div class="card">
+            <div class="testimonial-photo-placeholder mb-4" style="width: 56px; height: 56px;"></div>
+            <h3 class="type-h4 mb-1">{member.name}</h3>
+            <p class="type-body-sm text-forest mb-3">{member.role}</p>
+            <p class="type-body-sm text-warm-mid">{member.bio}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5: BACKED BY
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="backed-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="backed-heading" class="type-h2 text-warm-black mb-10">Backed by people who build&nbsp;things.</h2>
+      <div class="image-placeholder" style="min-height: 120px;">
+        <p class="type-body-sm text-stone">Investor/backer logos — add when ready</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6: CTA
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10 text-center">
+      <h2 class="type-h2 text-warm-black mb-4">We'd love to show you what we're&nbsp;building.</h2>
+      <a href={calendarUrl} class="btn-primary text-lg mt-6">
+        Book a call <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

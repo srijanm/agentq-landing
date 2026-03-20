@@ -1,0 +1,167 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
+---
+
+<BaseLayout title="Pricing — Simple, Everything Included | AgentQ" description="$600 a quarter. Agentic engineering, dedicated database, enterprise security, Developer Assist, full code ownership, one-click deployment.">
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1: THE PRICE
+       ═══════════════════════════════════════════ -->
+  <section class="pt-24 pb-16 md:pt-32 md:pb-20">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="text-center max-w-[672px] mx-auto">
+        <h1 class="type-display text-warm-black mb-4">Simple pricing. Everything&nbsp;included.</h1>
+        <p class="type-h3 text-warm-mid mb-12">One plan. No tiers to compare. No surprise&nbsp;invoices.</p>
+
+        <!-- Price card -->
+        <div class="card text-left mx-auto max-w-[560px]" style="border: 2px solid var(--color-warm-black);">
+          <div class="text-center mb-6">
+            <span class="price-amount">$600</span>
+            <span class="price-period"> / quarter</span>
+          </div>
+          <p class="type-body text-warm-mid mb-6 text-center">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
+
+          <ul class="space-y-3 type-body mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span><strong>Agentic engineering.</strong> Multi-agent AI build system with PM agent, backend developer, frontend developer, and code&nbsp;auditor.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span><strong>Dedicated database and hosting.</strong> Your own PostgreSQL instance. Not shared&nbsp;infrastructure.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span><strong>Enterprise security by default.</strong> XSS protection, SQL injection prevention, rate limiting, role-based access&nbsp;control.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span><strong>Developer Assist.</strong> Real engineers in your workflow. Submit requests, get help, keep&nbsp;moving.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span><strong>Full code ownership.</strong> Your code is yours. Move it anywhere. Hand it to any&nbsp;developer.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span><strong>One-click deployment.</strong> Live in minutes. Zero DevOps on your&nbsp;end.</span>
+            </li>
+          </ul>
+
+          <div class="text-center">
+            <a href={calendarUrl} class="btn-primary text-lg">
+              Book a launch call <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2: PUT IT IN CONTEXT
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="context-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="context-heading" class="type-h2 text-warm-black mb-10">Put it in&nbsp;context.</h2>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card">
+          <h3 class="type-h4 mb-2">vs. AI coding tools</h3>
+          <p class="type-body text-warm-mid">Lovable, Bolt, Replit, and similar tools run $20–$100/month. A year at mid-tier adds up to $600–$1,200. Most users in that range spend months burning credits and never reach a launchable&nbsp;product.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-2">vs. a freelancer</h3>
+          <p class="type-body text-warm-mid">A freelancer who can build production-grade software starts at $5,000 for an MVP. Takes weeks. You manage them, review their work, and hope they're still available when something breaks next&nbsp;month.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-2">vs. an agency</h3>
+          <p class="type-body text-warm-mid">Agencies charge $10,000–$50,000 per project and take 3–6 months. You manage the vendor, the timeline, and the scope. Costs creep upward. Delays are&nbsp;standard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3: PRICING FAQ
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="pricing-faq-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); padding: 40px;">
+        <h2 id="pricing-faq-heading" class="type-h2 text-warm-black mb-10">Common questions about&nbsp;pricing</h2>
+
+        <div class="divide-y divide-warm-black/10">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>"It costs more than Lovable."</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p class="type-body text-warm-mid pb-2">A year on Lovable at mid-tier runs $600–$1,200. Most users in that range spend months and never launch. AgentQ costs $600 a quarter and includes production-ready software, developer support, and deployment. The better question: which one gets you to&nbsp;launch?</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>"Why not just use ChatGPT or Cursor?"</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p class="type-body text-warm-mid pb-2">These are powerful tools for developers. They require you to understand code, debug errors, make architecture decisions, and handle deployment. If you're technical, they're great. AgentQ is for people who want to describe what they need and get working software&nbsp;back.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>"Why not hire a freelancer?"</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p class="type-body text-warm-mid pb-2">A freelancer starts at $5,000 for an MVP and takes weeks. You manage them, review their work, and hope they stick around for fixes. AgentQ costs $200 a month, delivers in days, and the developer support is ongoing. When you need changes next month, the support is still&nbsp;there.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>"What happens after the quarter ends?"</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p class="type-body text-warm-mid pb-2">Renew and keep building. Your app stays live, your database keeps running, Developer Assist stays available. Choose not to renew and you still keep your code. It's yours. Host it&nbsp;anywhere.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>"Are there any additional costs?"</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p class="type-body text-warm-mid pb-2">No hidden fees. The $600 covers AI coding, hosting, and Developer Assist. If your project requires paid third-party services, we'll tell you before any work&nbsp;starts.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>"Can I start with a smaller project to test it?"</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p class="type-body text-warm-mid pb-2">Yes. Most customers start with a single tool or MVP and expand from there. $600 gets you a launched product, not a commitment to rebuild your entire business on day&nbsp;one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4: CTA
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10 text-center">
+      <h2 class="type-h2 text-warm-black mb-4">$600 a quarter. A launched product. Code you&nbsp;own.</h2>
+      <a href={calendarUrl} class="btn-primary text-lg mt-6">
+        Book a launch call <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -185,6 +185,90 @@ body {
 }
 
 /* ═══════════════════════════════════════════
+   CASE STUDY TILES
+   ═══════════════════════════════════════════ */
+
+.case-study-tile {
+  display: block;
+  background: var(--color-sage-wash);
+  border: 1.5px solid var(--color-warm-black);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.case-study-tile:hover {
+  border-color: var(--color-forest);
+  box-shadow: 0 2px 12px rgba(0, 119, 69, 0.08);
+}
+
+.case-study-thumb {
+  background: var(--color-sage-surface);
+  border-bottom: 1px solid rgba(28, 24, 20, 0.08);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-study-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-forest);
+  background: rgba(0, 119, 69, 0.08);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+/* ═══════════════════════════════════════════
+   CONTACT FORM
+   ═══════════════════════════════════════════ */
+
+.contact-input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  padding: 12px 16px;
+  border: 1.5px solid rgba(28, 24, 20, 0.2);
+  border-radius: var(--radius-input);
+  background: var(--color-sage-wash);
+  color: var(--color-warm-black);
+  transition: border-color 0.2s ease;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: var(--color-forest);
+}
+
+.contact-input::placeholder {
+  color: var(--color-stone);
+}
+
+/* ═══════════════════════════════════════════
+   FINDING BLOCKS (Evals page)
+   ═══════════════════════════════════════════ */
+
+.finding-block {
+  padding-bottom: 48px;
+  border-bottom: 2px solid rgba(28, 24, 20, 0.08);
+}
+
+.finding-block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* ═══════════════════════════════════════════
    TYPOGRAPHY
    ═══════════════════════════════════════════ */
 

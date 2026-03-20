@@ -1,0 +1,107 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
+---
+
+<BaseLayout title="Resources — Videos, Tutorials & Blog | AgentQ" description="Brand videos, tutorials, and blog posts from the AgentQ team.">
+
+  <section class="pt-24 pb-12 md:pt-32 md:pb-16">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h1 class="type-display text-warm-black mb-4">Resources.</h1>
+      <p class="type-h3 text-warm-mid max-w-[672px]">Videos, tutorials, and insights from the AgentQ&nbsp;team.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BRAND VIDEOS
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="videos-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="videos-heading" class="type-h2 text-warm-black mb-8">Brand videos</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card">
+          <div class="video-placeholder mb-4" style="aspect-ratio: 16/9; min-height: unset;">
+            <p class="type-body-sm text-stone">Video thumbnail</p>
+          </div>
+          <h3 class="type-h4 mb-1">Campaign Film — Coming Soon</h3>
+          <p class="type-body-sm text-stone">Placeholder for brand campaign video</p>
+        </div>
+        <div class="card">
+          <div class="video-placeholder mb-4" style="aspect-ratio: 16/9; min-height: unset;">
+            <p class="type-body-sm text-stone">Video thumbnail</p>
+          </div>
+          <h3 class="type-h4 mb-1">Product Demo — Coming Soon</h3>
+          <p class="type-body-sm text-stone">Placeholder for product walkthrough</p>
+        </div>
+        <div class="card">
+          <div class="video-placeholder mb-4" style="aspect-ratio: 16/9; min-height: unset;">
+            <p class="type-body-sm text-stone">Video thumbnail</p>
+          </div>
+          <h3 class="type-h4 mb-1">Customer Story — Coming Soon</h3>
+          <p class="type-body-sm text-stone">Placeholder for customer testimonial video</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TUTORIALS
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="tutorials-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="tutorials-heading" class="type-h2 text-warm-black mb-8">Tutorials</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card">
+          <h3 class="type-h4 mb-2">Getting started with AgentQ</h3>
+          <p class="type-body-sm text-warm-mid">How to describe your product and get your first build started. Coming&nbsp;soon.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-2">Using Developer Assist</h3>
+          <p class="type-body-sm text-warm-mid">How to submit requests and work with your dev team. Coming&nbsp;soon.</p>
+        </div>
+        <div class="card">
+          <h3 class="type-h4 mb-2">Deploying your app</h3>
+          <p class="type-body-sm text-warm-mid">One-click deployment walkthrough. Coming&nbsp;soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BLOG
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="blog-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="blog-heading" class="type-h2 text-warm-black mb-8">Blog</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="card">
+          <span class="type-overline text-stone mb-2 block">Coming Soon</span>
+          <h3 class="type-h4 mb-2">Why vibecoding hits a wall</h3>
+          <p class="type-body-sm text-warm-mid">The gap between building and shipping — and how to close&nbsp;it.</p>
+        </div>
+        <div class="card">
+          <span class="type-overline text-stone mb-2 block">Coming Soon</span>
+          <h3 class="type-h4 mb-2">What production-ready actually means</h3>
+          <p class="type-body-sm text-warm-mid">Databases, security, and the things AI tools skip&nbsp;over.</p>
+        </div>
+        <div class="card">
+          <span class="type-overline text-stone mb-2 block">Coming Soon</span>
+          <h3 class="type-h4 mb-2">The SWE-WebDev Bench explained</h3>
+          <p class="type-body-sm text-warm-mid">How we tested 6 AI coding platforms and what we&nbsp;found.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-20 fade-in-section">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10 text-center">
+      <h2 class="type-h2 text-warm-black mb-4">Ready to start&nbsp;building?</h2>
+      <a href={calendarUrl} class="btn-primary text-lg mt-6">
+        Book a call <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
