@@ -168,19 +168,19 @@ body {
   color: var(--color-forest);
 }
 
-/* Email CTA — stacked: input on top, button below */
+/* Email CTA — side by side with gap */
 .hero-cta-row {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  max-width: 420px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .hero-email-input {
-  width: 100%;
+  flex: 1;
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.5;
@@ -191,7 +191,6 @@ body {
   background: white;
   color: var(--color-warm-black);
   transition: border-color 0.2s ease;
-  text-align: center;
 }
 
 .hero-email-input:focus {
@@ -209,6 +208,20 @@ body {
 
 .hero-cta-btn {
   white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .hero-cta-row {
+    flex-direction: column;
+  }
+  .hero-email-input {
+    width: 100%;
+  }
+  .hero-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Rotating social proof */
@@ -275,24 +288,27 @@ body {
 
 .hero-node--step {
   background: white;
-  border: 1.5px solid rgba(28, 24, 20, 0.12);
+  border: 1.5px solid rgba(28, 24, 20, 0.2);
   color: var(--color-warm-black);
-  box-shadow: 0 2px 8px rgba(28, 24, 20, 0.06);
-  animation: hero-node-appear 0.6s ease forwards, hero-node-float 4s ease-in-out infinite;
+  box-shadow: 0 4px 16px rgba(28, 24, 20, 0.1);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  animation: hero-node-appear 0.6s ease forwards, hero-node-float 6s ease-in-out infinite;
   animation-delay: var(--node-delay, 0s), calc(var(--node-delay, 0s) + 0.6s);
 }
 
 .hero-node--step:nth-child(1) {
-  --float-x: -3px;
-  --float-y: -5px;
+  --float-x: -1px;
+  --float-y: -2px;
 }
 .hero-node--step:nth-child(2) {
-  --float-x: 2px;
-  --float-y: -6px;
+  --float-x: 1px;
+  --float-y: -3px;
 }
 .hero-node--step:nth-child(3) {
-  --float-x: -2px;
-  --float-y: -4px;
+  --float-x: -1px;
+  --float-y: -2px;
 }
 
 .hero-node--final {
@@ -324,16 +340,23 @@ body {
 
 .hero-connectors {
   width: 100%;
-  height: 60px;
+  height: 80px;
   margin: -4px 0;
   opacity: 0;
   animation: hero-connectors-appear 0.8s ease forwards 1.2s;
 }
 
 .hero-connector-line {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: hero-line-draw 1.2s ease forwards 1.3s;
+  stroke-dasharray: 6 6;
+  stroke-dashoffset: 0;
+  animation: hero-line-flow 2s linear infinite;
+  stroke-width: 1.5;
+}
+
+@keyframes hero-line-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
 }
 
 @keyframes hero-node-appear {
@@ -351,12 +374,6 @@ body {
 @keyframes hero-connectors-appear {
   to {
     opacity: 1;
-  }
-}
-
-@keyframes hero-line-draw {
-  to {
-    stroke-dashoffset: 0;
   }
 }
 
