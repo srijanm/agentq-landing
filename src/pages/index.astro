@@ -411,6 +411,22 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           </a>
         </div>
       </div>
+
+      <!-- CTA box -->
+      <div class="card mt-8" style="background: var(--color-forest); border: 1.5px solid var(--color-warm-black);">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <h3 class="type-h4 text-white mb-1">See the data in action.</h3>
+            <p class="type-body text-white/70">Book a demo and we'll walk you through what AgentQ can build for&nbsp;you.</p>
+          </div>
+          <form class="email-cta-row shrink-0" novalidate>
+            <input type="email" class="email-cta-input" placeholder="Enter your email" required>
+            <a href={calendarUrl} class="btn-primary email-cta-btn" style="background-color: var(--color-warm-black);" data-calendar-url={calendarUrl}>
+              Book a Demo <span aria-hidden="true">&rarr;</span>
+            </a>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -647,13 +663,6 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
               <span>One-click deployment</span>
             </li>
           </ul>
-
-          <form class="email-cta-row" novalidate>
-            <input type="email" class="email-cta-input" placeholder="Enter your email here" required>
-            <a href={calendarUrl} class="btn-primary email-cta-btn" data-calendar-url={calendarUrl}>
-              Book a Demo <span aria-hidden="true">&rarr;</span>
-            </a>
-          </form>
         </div>
       </div>
     </div>
