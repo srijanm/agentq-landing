@@ -625,40 +625,72 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           </div>
         </div>
         <div class="pricing-content relative z-10">
-          <h2 id="pricing-heading" class="type-h2 text-warm-black mb-8">Simple pricing. Everything&nbsp;included.</h2>
+          <div class="grid lg:grid-cols-[1fr_1fr] gap-10 lg:gap-16 items-start">
+            <!-- Left: pricing details -->
+            <div>
+              <p class="type-overline text-forest mb-4">Pricing</p>
+              <h2 id="pricing-heading" class="type-h2 text-warm-black mb-6">Simple pricing.<br>Everything&nbsp;included.</h2>
 
-          <div class="mb-6">
-            <span class="price-amount">$600</span>
-            <span class="price-period"> / quarter</span>
+              <div class="mb-4">
+                <span class="price-amount">$600</span>
+                <span class="price-period"> / quarter</span>
+              </div>
+              <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
+
+              <a href="/pricing" class="type-body font-medium text-forest hover:text-forest-hover transition-colors">
+                See full pricing details <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+
+            <!-- Right: what's included -->
+            <div>
+              <h3 class="type-h4 text-warm-black mb-5">What's included:</h3>
+              <ul class="space-y-4 type-body">
+                <li class="flex items-start gap-3">
+                  <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+                  <div>
+                    <span class="font-medium">Agentic engineering</span>
+                    <p class="type-body-sm text-warm-mid mt-0.5">Multi-agent AI build system with PM, backend, frontend, and code&nbsp;auditor.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+                  <div>
+                    <span class="font-medium">Dedicated database &amp; hosting</span>
+                    <p class="type-body-sm text-warm-mid mt-0.5">Your own PostgreSQL instance. Not shared&nbsp;infrastructure.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+                  <div>
+                    <span class="font-medium">Enterprise security</span>
+                    <p class="type-body-sm text-warm-mid mt-0.5">XSS, SQL injection, rate limiting, RBAC&nbsp;&mdash; by&nbsp;default.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+                  <div>
+                    <span class="font-medium">Developer Assist</span>
+                    <p class="type-body-sm text-warm-mid mt-0.5">Real engineers in your workflow. Not a chatbot.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+                  <div>
+                    <span class="font-medium">Full code ownership</span>
+                    <p class="type-body-sm text-warm-mid mt-0.5">Your code. Move it anywhere. No&nbsp;lock-in.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+                  <div>
+                    <span class="font-medium">One-click deployment</span>
+                    <p class="type-body-sm text-warm-mid mt-0.5">Live in minutes. Zero DevOps on your&nbsp;end.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
-
-          <ul class="space-y-3 type-body text-left max-w-[480px] mx-auto mb-8">
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Agentic engineering&nbsp;&mdash; multi-agent AI build system</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Dedicated database and hosting</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Enterprise security by default</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>On-demand Developer Assist&nbsp;&mdash; real engineers in your workflow</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Full code ownership</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>One-click deployment</span>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
