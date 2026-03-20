@@ -468,6 +468,14 @@ body {
   max-height: 560px;
 }
 
+.video-embed-fullwidth {
+  width: 100%;
+  max-height: none;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
 .video-embed-inner {
   text-align: center;
   color: var(--color-stone);
