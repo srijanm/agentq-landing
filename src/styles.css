@@ -302,12 +302,14 @@ body {
 }
 
 .hero-node--step {
-  background: rgba(28, 24, 20, 0.04);
-  border: 1.5px solid var(--color-warm-black);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: var(--color-warm-black);
-  box-shadow: none;
-  animation: hero-node-appear 0.6s ease forwards, hero-node-float 6s ease-in-out infinite, ai-badge-glow 2.5s ease-in-out infinite;
-  animation-delay: var(--node-delay, 0s), calc(var(--node-delay, 0s) + 0.6s), calc(var(--node-delay, 0s) + 1s);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  animation: hero-node-appear 0.6s ease forwards, hero-node-float 6s ease-in-out infinite;
+  animation-delay: var(--node-delay, 0s), calc(var(--node-delay, 0s) + 0.6s);
 }
 
 .hero-node--step:nth-child(1) {
