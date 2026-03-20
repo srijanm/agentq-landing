@@ -619,9 +619,14 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <h2 id="pricing-heading" class="type-h2 text-warm-black mb-10">Simple pricing. Everything&nbsp;included.</h2>
 
-      <div class="grid lg:grid-cols-[1fr_1fr] gap-4">
-        <!-- Left: price card -->
-        <div class="card" style="border: 1.5px solid var(--color-warm-black);">
+      <div class="pricing-card">
+        <!-- Background image slot -->
+        <div class="pricing-card-bg" aria-hidden="true">
+          <div class="section-bg-placeholder" style="width:100%;height:100%;opacity:0.3;">
+            <p class="type-body-sm text-stone">Pricing background image</p>
+          </div>
+        </div>
+        <div class="relative z-10">
           <div class="mb-6">
             <span class="price-amount">$600</span>
             <span class="price-period"> / quarter</span>
@@ -657,13 +662,6 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
             <a href="/pricing" class="type-body font-medium text-forest hover:text-forest-hover transition-colors">
               See full pricing details <span aria-hidden="true">&rarr;</span>
             </a>
-          </div>
-        </div>
-
-        <!-- Right: background image placeholder -->
-        <div class="hidden lg:block" style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); overflow: hidden;">
-          <div class="section-bg-placeholder" style="min-height: 100%; opacity: 0.5;">
-            <p class="type-body-sm text-stone">Pricing image</p>
           </div>
         </div>
       </div>
