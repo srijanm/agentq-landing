@@ -136,8 +136,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom;
-  opacity: 0.18;
+  /* Hands touch at ~center-x, ~58% from top of image.
+     Position so that point aligns with the bottom area
+     where "Launch your product" sits */
+  object-position: center 62%;
+  opacity: 0.22;
 }
 
 /* Video pill */
