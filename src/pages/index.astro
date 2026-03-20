@@ -603,52 +603,58 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
   <!-- ═══════════════════════════════════════════
        SECTION 11: PRICING
        ═══════════════════════════════════════════ -->
-  <section id="pricing" class="py-16 md:py-20 fade-in-section section-with-bg" aria-labelledby="pricing-heading">
-    <div class="section-bg" aria-hidden="true">
-      <div class="section-bg-placeholder">
-        <p class="type-body-sm text-stone">Pricing background image — same style as hero</p>
-      </div>
-    </div>
-    <div class="max-w-[1280px] mx-auto px-5 md:px-10 relative z-10">
-      <div class="max-w-[672px] mx-auto text-center">
-        <h2 id="pricing-heading" class="type-h2 text-warm-black mb-8">Simple pricing. Everything&nbsp;included.</h2>
-
-        <div class="mb-6">
-          <span class="price-amount">$600</span>
-          <span class="price-period"> / quarter</span>
+  <section id="pricing" class="py-16 md:py-20 fade-in-section" aria-labelledby="pricing-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <div class="pricing-container">
+        <!-- Background image slot -->
+        <div class="pricing-bg" aria-hidden="true">
+          <div class="section-bg-placeholder">
+            <p class="type-body-sm text-stone">Pricing background image</p>
+          </div>
         </div>
-        <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
+        <div class="pricing-content relative z-10">
+          <h2 id="pricing-heading" class="type-h2 text-warm-black mb-8">Simple pricing. Everything&nbsp;included.</h2>
 
-        <ul class="space-y-3 type-body text-left max-w-[480px] mx-auto mb-8">
-          <li class="flex items-start gap-3">
-            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-            <span>Agentic engineering&nbsp;&mdash; multi-agent AI build system</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-            <span>Dedicated database and hosting</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-            <span>Enterprise security by default</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-            <span>On-demand Developer Assist&nbsp;&mdash; real engineers in your workflow</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-            <span>Full code ownership</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-            <span>One-click deployment</span>
-          </li>
-        </ul>
+          <div class="mb-6">
+            <span class="price-amount">$600</span>
+            <span class="price-period"> / quarter</span>
+          </div>
+          <p class="type-body text-warm-mid mb-8">Applied towards AI coding, app hosting, and Developer&nbsp;Assist.</p>
 
-        <a href={calendarUrl} class="btn-primary text-lg">
-          Book a launch call <span aria-hidden="true">&rarr;</span>
-        </a>
+          <ul class="space-y-3 type-body text-left max-w-[480px] mx-auto mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Agentic engineering&nbsp;&mdash; multi-agent AI build system</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Dedicated database and hosting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Enterprise security by default</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>On-demand Developer Assist&nbsp;&mdash; real engineers in your workflow</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>Full code ownership</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
+              <span>One-click deployment</span>
+            </li>
+          </ul>
+
+          <form class="email-cta-row" novalidate>
+            <input type="email" class="email-cta-input" placeholder="Enter your email here" required>
+            <a href={calendarUrl} class="btn-primary email-cta-btn" data-calendar-url={calendarUrl}>
+              Book a Demo <span aria-hidden="true">&rarr;</span>
+            </a>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -767,9 +773,12 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
         <div style="padding: 40px;">
           <h2 id="closing-heading" class="type-h2 text-warm-black mb-4">It's time to&nbsp;ship.</h2>
           <p class="type-body-lg text-warm-mid mb-8 max-w-[576px]">Build something real. Own your code. Launch with&nbsp;confidence.</p>
-          <a href={calendarUrl} class="btn-primary text-lg mb-4">
-            Book a call <span aria-hidden="true">&rarr;</span>
-          </a>
+          <form class="email-cta-row" novalidate>
+            <input type="email" class="email-cta-input" placeholder="Enter your email here" required>
+            <a href={calendarUrl} class="btn-primary email-cta-btn" data-calendar-url={calendarUrl}>
+              Book a Demo <span aria-hidden="true">&rarr;</span>
+            </a>
+          </form>
         </div>
         <div class="hidden lg:block h-full">
           <img src="/images/cta.png" alt="" class="w-full h-full object-cover" style="transform: scaleX(-1);">

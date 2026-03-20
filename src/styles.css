@@ -545,6 +545,92 @@ body {
 }
 
 /* ═══════════════════════════════════════════
+   PRICING CONTAINER (CTA-style bordered box)
+   ═══════════════════════════════════════════ */
+
+.pricing-container {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid var(--color-warm-black);
+  border-radius: var(--radius-card);
+}
+
+.pricing-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pricing-content {
+  padding: 48px 40px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .pricing-content {
+    padding: 32px 20px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   REUSABLE EMAIL + CTA ROW
+   ═══════════════════════════════════════════ */
+
+.email-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 520px;
+}
+
+.email-cta-input {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  padding: 14px 20px;
+  border: 1.5px solid rgba(28, 24, 20, 0.15);
+  border-radius: var(--radius-button);
+  background: white;
+  color: var(--color-warm-black);
+  transition: border-color 0.2s ease;
+}
+
+.email-cta-input:focus {
+  outline: none;
+  border-color: var(--color-forest);
+}
+
+.email-cta-input::placeholder {
+  color: var(--color-stone);
+}
+
+.email-cta-input.invalid {
+  border-color: var(--color-signal-red);
+}
+
+.email-cta-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 560px) {
+  .email-cta-row {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .email-cta-input {
+    width: 100%;
+  }
+  .email-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ═══════════════════════════════════════════
    CASE STUDY TILES
    ═══════════════════════════════════════════ */
 

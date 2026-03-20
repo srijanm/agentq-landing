@@ -18,40 +18,62 @@ function initVariant() {
 }
 
 /* ═══════════════════════════════════════════
-   HERO EMAIL VALIDATION
+   EMAIL VALIDATION — All email+CTA forms
    ═══════════════════════════════════════════ */
 
-function initHeroForm() {
-  const form = document.getElementById("hero-form");
-  const input = document.getElementById("hero-email");
-  const btn = document.getElementById("hero-cta-btn");
-  const error = document.getElementById("hero-email-error");
-  if (!form || !input || !btn) return;
-
-  const calendarUrl = btn.dataset.calendarUrl;
-
+function initEmailForms() {
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const email = input.value.trim();
-    if (!email || !isValidEmail(email)) {
-      input.classList.add("invalid");
-      if (error) error.style.display = "block";
-      input.focus();
-      return;
-    }
-    input.classList.remove("invalid");
-    if (error) error.style.display = "none";
-    // Valid email — open calendar booking
-    window.open(calendarUrl, "_blank");
-  });
+  // Hero form (has its own error element)
+  const heroForm = document.getElementById("hero-form");
+  const heroInput = document.getElementById("hero-email");
+  const heroBtn = document.getElementById("hero-cta-btn");
+  const heroError = document.getElementById("hero-email-error");
 
-  input.addEventListener("input", () => {
-    input.classList.remove("invalid");
-    if (error) error.style.display = "none";
+  if (heroForm && heroInput && heroBtn) {
+    const url = heroBtn.dataset.calendarUrl;
+    heroBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const email = heroInput.value.trim();
+      if (!email || !isValidEmail(email)) {
+        heroInput.classList.add("invalid");
+        if (heroError) heroError.style.display = "block";
+        heroInput.focus();
+        return;
+      }
+      heroInput.classList.remove("invalid");
+      if (heroError) heroError.style.display = "none";
+      window.open(url, "_blank");
+    });
+    heroInput.addEventListener("input", () => {
+      heroInput.classList.remove("invalid");
+      if (heroError) heroError.style.display = "none";
+    });
+  }
+
+  // All other email-cta-row forms
+  document.querySelectorAll(".email-cta-row").forEach((form) => {
+    const input = form.querySelector(".email-cta-input");
+    const btn = form.querySelector(".email-cta-btn");
+    if (!input || !btn) return;
+
+    const url = btn.dataset.calendarUrl;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const email = input.value.trim();
+      if (!email || !isValidEmail(email)) {
+        input.classList.add("invalid");
+        input.focus();
+        return;
+      }
+      input.classList.remove("invalid");
+      window.open(url, "_blank");
+    });
+    input.addEventListener("input", () => {
+      input.classList.remove("invalid");
+    });
   });
 }
 
@@ -146,7 +168,7 @@ function initScrollAnimations() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initVariant();
-  initHeroForm();
+  initEmailForms();
   initNav();
   initFaq();
   initScrollAnimations();
