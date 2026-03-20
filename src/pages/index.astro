@@ -776,8 +776,11 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
        ═══════════════════════════════════════════ -->
   <section id="closing-cta" class="py-16 md:py-20 fade-in-section" aria-labelledby="closing-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <div class="grid lg:grid-cols-[1fr_1fr] items-center" style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); overflow: hidden;">
-        <div style="padding: 40px;">
+      <div class="cta-container">
+        <div class="cta-container-bg" aria-hidden="true">
+          <img src="/images/cta-bg.png" alt="">
+        </div>
+        <div class="relative z-10" style="padding: 40px;">
           <h2 id="closing-heading" class="type-h2 text-warm-black mb-4">It's time to&nbsp;ship.</h2>
           <p class="type-body-lg text-warm-mid mb-8 max-w-[576px]">Build something real. Own your code. Launch with&nbsp;confidence.</p>
           <form class="email-cta-row" novalidate>
@@ -786,9 +789,6 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
               Book a Demo <span aria-hidden="true">&rarr;</span>
             </a>
           </form>
-        </div>
-        <div class="hidden lg:block h-full">
-          <img src="/images/cta.png" alt="" class="w-full h-full object-cover" style="transform: scaleX(-1);">
         </div>
       </div>
     </div>

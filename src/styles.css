@@ -577,6 +577,31 @@ body {
 }
 
 /* ═══════════════════════════════════════════
+   CTA CONTAINER WITH BACKGROUND
+   ═══════════════════════════════════════════ */
+
+.cta-container {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid var(--color-warm-black);
+  border-radius: var(--radius-card);
+}
+
+.cta-container-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cta-container-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════════
    REUSABLE EMAIL + CTA ROW
    ═══════════════════════════════════════════ */
 
