@@ -725,19 +725,72 @@ body {
   width: calc(100% - 32px);
   max-width: 1280px;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px) saturate(1.4);
-  -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(1.6) brightness(1.05);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-card);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Chromatic / prismatic edge glow via pseudo-element */
+.top-nav::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(68, 100, 217, 0.3),
+    rgba(43, 168, 168, 0.2) 25%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0.1) 60%,
+    rgba(242, 169, 59, 0.2) 75%,
+    rgba(227, 78, 52, 0.25)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.4s ease;
+}
+
+/* Corner highlights — refraction hot spots */
+.top-nav::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(ellipse 80px 60px at 0% 0%, rgba(68, 100, 217, 0.12), transparent),
+    radial-gradient(ellipse 80px 60px at 100% 0%, rgba(227, 78, 52, 0.1), transparent),
+    radial-gradient(ellipse 80px 60px at 0% 100%, rgba(43, 168, 168, 0.08), transparent),
+    radial-gradient(ellipse 80px 60px at 100% 100%, rgba(242, 169, 59, 0.1), transparent);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
 }
 
 .top-nav.scrolled {
-  background: rgba(250, 249, 245, 0.85);
-  border-color: rgba(28, 24, 20, 0.08);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  background: rgba(250, 249, 245, 0.82);
+  border-color: rgba(28, 24, 20, 0.06);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.top-nav.scrolled::before {
+  opacity: 0.3;
+}
+
+.top-nav.scrolled::after {
+  opacity: 0.2;
 }
 
 .nav-link {
