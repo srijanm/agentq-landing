@@ -98,6 +98,26 @@ function initFaq() {
 }
 
 /* ═══════════════════════════════════════════
+   NAV — Frosted glass to solid on scroll
+   ═══════════════════════════════════════════ */
+
+function initNav() {
+  const nav = document.getElementById("top-nav");
+  if (!nav) return;
+
+  function onScroll() {
+    if (window.scrollY > 80) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+/* ═══════════════════════════════════════════
    SCROLL FADE-IN — IntersectionObserver
    ═══════════════════════════════════════════ */
 
@@ -127,7 +147,7 @@ function initScrollAnimations() {
 document.addEventListener("DOMContentLoaded", () => {
   initVariant();
   initHeroForm();
-  initSocialProof();
+  initNav();
   initFaq();
   initScrollAnimations();
 });
