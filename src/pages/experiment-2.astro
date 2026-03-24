@@ -28,12 +28,14 @@ const description = "AI agents build your software. Real developers make sure it
         Agent<span class="logo-q">Q</span>
       </a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="#how" class="nav-link type-body font-medium">How it works</a>
-        <a href="#pricing" class="nav-link type-body font-medium">Pricing</a>
+        <a href="/developer-assist" class="nav-link type-body font-medium">How it works</a>
+        <a href="/pricing" class="nav-link type-body font-medium">Pricing</a>
         <a href="/evals" class="nav-link type-body font-medium">Evals</a>
+        <a href="/case-studies" class="nav-link type-body font-medium">Case Studies</a>
+        <a href="/about" class="nav-link type-body font-medium">About</a>
       </div>
       <a href={calendarUrl} class="btn-primary btn-nav">
-        Book a demo <span aria-hidden="true">&rarr;</span>
+        Book a call <span aria-hidden="true">&rarr;</span>
       </a>
     </div>
   </nav>
@@ -56,8 +58,8 @@ const description = "AI agents build your software. Real developers make sure it
           Independently tested against 5 platforms
         </span>
 
-        <h1 class="type-display text-warm-black mb-5">You built the demo. Now <span class="text-forest">ship</span> the&nbsp;product.</h1>
-        <p class="type-h3 text-warm-mid mb-10 max-w-[672px] mx-auto">AI agents build your software in days. Real developers make sure it launches. Clean code you own.&nbsp;$200/mo.</p>
+        <h1 class="type-display text-warm-black mb-5">You built the demo.<br>Now <span class="text-forest">ship</span> the&nbsp;product.</h1>
+        <p class="type-h3 text-warm-mid mb-10 max-w-[672px] mx-auto">AI agents build your software. Real developers make sure it works in production. All in a matter of days, not&nbsp;months.</p>
 
         <a href={calendarUrl} class="btn-primary">
           Book a demo <span aria-hidden="true">&rarr;</span>
@@ -77,16 +79,16 @@ const description = "AI agents build your software. Real developers make sure it
           <p class="type-body text-stone">Apps built on QwikBuild</p>
         </div>
         <div>
-          <p class="type-h2 text-warm-black mb-1">57</p>
-          <p class="type-body text-stone">Languages supported</p>
-        </div>
-        <div>
           <p class="type-h2 text-warm-black mb-1">99%</p>
           <p class="type-body text-stone">Platform uptime</p>
         </div>
         <div>
           <p class="type-h2 text-warm-black mb-1">Days</p>
-          <p class="type-body text-stone">Idea to launched product</p>
+          <p class="type-body text-stone">Idea to launch</p>
+        </div>
+        <div>
+          <p class="type-h2 text-warm-black mb-1">Best of 5</p>
+          <p class="type-body text-stone">Independently tested AI coding platforms</p>
         </div>
       </div>
     </div>
@@ -107,8 +109,13 @@ const description = "AI agents build your software. Real developers make sure it
             <img src="/images/2.png" alt="" class="h-full w-full object-cover">
           </div>
           <div class="problem-card-text">
-            <h3 class="type-h4 mb-2">Looks finished. Isn't.</h3>
-            <p class="type-body text-warm-mid">The frontend is gorgeous. The login breaks on edge cases. Payments work in test mode only. The database buckles under real data. What you showed investors isn't what customers&nbsp;experience.</p>
+            <h3 class="type-h4 mb-2">Looks finished, doesn't&nbsp;work.</h3>
+            <ul class="type-body text-warm-mid space-y-1 list-disc pl-5">
+              <li>The frontend is gorgeous but the login breaks</li>
+              <li>Payments work in test mode only</li>
+              <li>The database buckles with real users</li>
+              <li>What you see is NOT what you get</li>
+            </ul>
           </div>
         </div>
 
@@ -118,7 +125,12 @@ const description = "AI agents build your software. Real developers make sure it
           </div>
           <div class="problem-card-text">
             <h3 class="type-h4 mb-2">Nobody to call at 2&nbsp;AM.</h3>
-            <p class="type-body text-warm-mid">Every fix creates a new bug. The AI loops on the same error. Credits drain. You're alone with code you didn't write and can't debug. No human on the other&nbsp;side.</p>
+            <ul class="type-body text-warm-mid space-y-1 list-disc pl-5">
+              <li>Every fix burns credits &amp; creates new bugs</li>
+              <li>The AI loops on the same error</li>
+              <li>You're alone with code you didn't write</li>
+              <li>No support from humans on the other side</li>
+            </ul>
           </div>
         </div>
       </div>
