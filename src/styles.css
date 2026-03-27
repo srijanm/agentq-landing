@@ -603,6 +603,13 @@ body {
 .pricing-tier--featured {
   position: relative;
   border: 2px solid var(--color-forest);
+  box-shadow: 0 0 0 0 rgba(0, 119, 69, 0.4);
+  animation: pricing-glow 2.5s ease-in-out infinite;
+}
+
+@keyframes pricing-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 119, 69, 0.15); }
+  50% { box-shadow: 0 0 20px 4px rgba(0, 119, 69, 0.2); }
 }
 
 .pricing-badge {
