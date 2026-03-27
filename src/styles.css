@@ -1139,6 +1139,13 @@ body {
    CARDS
    ═══════════════════════════════════════════ */
 
+.stat-card {
+  background: rgba(227, 222, 210, 0.4);
+  border: 1.5px solid var(--color-warm-black);
+  border-radius: var(--radius-card);
+  padding: 24px 16px;
+}
+
 .card {
   background: var(--color-sage-surface);
   border: 1.5px solid var(--color-warm-black);
