@@ -89,6 +89,42 @@ function initScrollAnimations() {
 }
 
 /* ═══════════════════════════════════════════
+   BILLING TOGGLE
+   ═══════════════════════════════════════════ */
+
+function initBillingToggle() {
+  const toggles = document.querySelectorAll(".billing-toggle");
+  if (!toggles.length) return;
+
+  toggles.forEach((toggle) => {
+    const tabs = toggle.querySelectorAll(".billing-tab");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const billing = tab.dataset.billing;
+
+        // Update all toggles on the page to stay in sync
+        document.querySelectorAll(".billing-toggle .billing-tab").forEach((t) => {
+          t.classList.remove("billing-tab--active");
+          t.setAttribute("aria-selected", "false");
+        });
+        document.querySelectorAll(`.billing-tab[data-billing="${billing}"]`).forEach((t) => {
+          t.classList.add("billing-tab--active");
+          t.setAttribute("aria-selected", "true");
+        });
+
+        // Update all prices and billing notes on the page
+        document.querySelectorAll(".pricing-price").forEach((el) => {
+          el.textContent = el.dataset[billing];
+        });
+        document.querySelectorAll(".pricing-billed").forEach((el) => {
+          el.textContent = el.dataset[billing];
+        });
+      });
+    });
+  });
+}
+
+/* ═══════════════════════════════════════════
    INIT
    ═══════════════════════════════════════════ */
 
@@ -96,4 +132,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initVariant();
   initFaq();
   initScrollAnimations();
+  initBillingToggle();
 });

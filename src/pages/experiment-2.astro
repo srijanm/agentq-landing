@@ -401,49 +401,94 @@ const description = "AI agents build your software. Real developers make sure it
        ═══════════════════════════════════════════ -->
   <section id="pricing" class="py-16 md:py-20 fade-in-section" aria-labelledby="pricing-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <p class="type-overline text-stone mb-4">Pricing</p>
-      <h2 id="pricing-heading" class="type-h2 text-warm-black mb-10">Everything included. No&nbsp;surprises.</h2>
+      <h2 id="pricing-heading" class="type-h2 text-warm-black mb-4 text-center">Simple pricing. Scale when you're&nbsp;ready.</h2>
+      <p class="type-body-lg text-warm-mid mb-8 text-center">Three plans. No surprise&nbsp;invoices.</p>
 
-      <div class="pricing-card">
-        <div class="pricing-card-bg" aria-hidden="true">
-          <img src="/images/pricing-bg.png" alt="">
+      <div class="flex justify-center mb-10">
+        <div class="billing-toggle" role="tablist">
+          <button class="billing-tab billing-tab--active" data-billing="monthly" role="tab" aria-selected="true">Monthly</button>
+          <button class="billing-tab" data-billing="quarterly" role="tab" aria-selected="false">Quarterly (10% off)</button>
+          <button class="billing-tab" data-billing="yearly" role="tab" aria-selected="false">Yearly (20% off)</button>
         </div>
-        <div class="relative z-10">
-          <div class="mb-2">
-            <span class="price-amount">$200</span>
-            <span class="price-period"> / mo</span>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="pricing-tier">
+          <h3 class="type-h3 mb-1">Starter</h3>
+          <p class="type-body text-warm-mid mb-4">For individuals getting started</p>
+          <div class="mb-1">
+            <span class="price-amount pricing-price" data-monthly="$20" data-quarterly="$18" data-yearly="$16">$20</span>
+            <span class="price-period">/month</span>
           </div>
-          <p class="type-body text-stone mb-6">Billed $600 per&nbsp;quarter.</p>
-          <ul class="space-y-3 type-body mb-8">
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>AI agentic engineering</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Dedicated database &amp; hosting</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Enterprise security by default</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Developer Assist &mdash; real engineers on demand</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>Full code ownership</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-forest shrink-0 mt-0.5">&#10003;</span>
-              <span>One-click launch</span>
-            </li>
+          <p class="type-body-sm text-stone mb-4 pricing-billed" data-monthly="$20 billed monthly" data-quarterly="$54 billed quarterly" data-yearly="$192 billed yearly">$20 billed monthly</p>
+          <span class="pricing-credits mb-6">60 credits / month</span>
+          <ul class="space-y-2.5 type-body mb-8 flex-1">
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>~10 Min Build Time</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Developer Assist Credits</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>24 hours SLA on Dev Assist</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>NoSQL Database</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Simple Admin/Non-Admin Roles</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Phone &amp; OTP Auth</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Rapid Blueprint Code</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>One-Shot App Generation</span></li>
           </ul>
-          <a href={calendarUrl} class="btn-primary mb-4">
-            Book a demo <span aria-hidden="true">&rarr;</span>
-          </a>
-          <p class="type-body-sm text-stone mt-4">What an agency charges $30,000 for, delivered at a fraction of the cost and&nbsp;time.</p>
+          <a href="/pricing" class="btn-primary w-full text-center">Subscribe</a>
+        </div>
+
+        <div class="pricing-tier pricing-tier--featured">
+          <span class="pricing-badge">Most Popular</span>
+          <h3 class="type-h3 mb-1">Business</h3>
+          <p class="type-body text-warm-mid mb-4">For professional developers and teams</p>
+          <div class="mb-1">
+            <span class="price-amount pricing-price" data-monthly="$200" data-quarterly="$180" data-yearly="$160">$200</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="type-body-sm text-stone mb-4 pricing-billed" data-monthly="$200 billed monthly" data-quarterly="$540 billed quarterly" data-yearly="$1,920 billed yearly">$200 billed monthly</p>
+          <span class="pricing-credits mb-6">600 credits / month</span>
+          <ul class="space-y-2.5 type-body mb-8 flex-1">
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>1-3 Hour Build Time</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Developer Assist Credits</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>3 hours SLA on Dev Assist</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Dedicated PostgreSQL with Full Access</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Unlimited Custom Roles &amp; RBAC</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Multiple Auth Methods (OAuth, Email, Phone)</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Type-Safe Code + AI Code Audit</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Execution Traces &amp; Full Code History</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Scalable Serverless Architecture</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>XSS, SQL Injection &amp; DoS Protection</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Direct Code Editability</span></li>
+          </ul>
+          <a href="/pricing" class="btn-primary w-full text-center">Subscribe</a>
+        </div>
+
+        <div class="pricing-tier">
+          <h3 class="type-h3 mb-1">Enterprise</h3>
+          <p class="type-body text-warm-mid mb-4">Custom terms for large scale</p>
+          <div class="mb-1">
+            <span class="price-amount pricing-price" data-monthly="$2,000" data-quarterly="$1,800" data-yearly="$1,600">$2,000</span>
+            <span class="price-period">/month</span>
+          </div>
+          <p class="type-body-sm text-stone mb-4 pricing-billed" data-monthly="$2,000 billed monthly" data-quarterly="$5,400 billed quarterly" data-yearly="$19,200 billed yearly">$2,000 billed monthly</p>
+          <span class="pricing-credits mb-6">6000 credits / month</span>
+          <ul class="space-y-2.5 type-body mb-8 flex-1">
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>1-3 Hour Build Time</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Developer Assist Credits</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>30 min SLA on Dev Assist</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Org Team Collaboration &amp; Sharing</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Hands-On Education &amp; Training on AI Agentic Engineering</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Dedicated PostgreSQL with Full Access</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Unlimited Custom Roles &amp; RBAC</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Multiple Auth Methods (OAuth, Email, Phone)</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Type-Safe Code + AI Code Audit</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Execution Traces &amp; Full Code History</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Scalable Serverless Architecture</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>XSS, SQL Injection &amp; DoS Protection</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Direct Code Editability</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Organisation &amp; Team Management</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Custom Development</span></li>
+            <li class="flex items-start gap-3"><span class="text-forest shrink-0 mt-0.5">&#10003;</span><span>Private Cloud Deployment</span></li>
+          </ul>
+          <a href={calendarUrl} class="btn-primary w-full text-center">Contact Us</a>
         </div>
       </div>
     </div>
