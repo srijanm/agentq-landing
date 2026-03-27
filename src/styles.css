@@ -267,7 +267,7 @@ body {
 .hero-process-diagram {
   width: 100%;
   max-width: 800px;
-  margin-top: 40px;
+  margin-top: 64px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
@@ -302,12 +302,12 @@ body {
 }
 
 .hero-node--step {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(16px) saturate(1.4);
-  -webkit-backdrop-filter: blur(16px) saturate(1.4);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(250, 249, 245, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--color-warm-black);
   color: var(--color-warm-black);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   animation: hero-node-appear 0.6s ease forwards, hero-node-float 6s ease-in-out infinite;
   animation-delay: var(--node-delay, 0s), calc(var(--node-delay, 0s) + 0.6s);
 }
@@ -601,19 +601,22 @@ body {
 }
 
 .pricing-tier--featured {
+  position: relative;
   border: 2px solid var(--color-forest);
 }
 
 .pricing-badge {
-  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--color-forest);
   color: #fff;
   font-size: 12px;
   font-weight: 600;
   padding: 4px 12px;
   border-radius: 100px;
-  margin-bottom: 12px;
-  width: fit-content;
+  white-space: nowrap;
 }
 
 .pricing-credits {
