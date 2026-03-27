@@ -22,8 +22,8 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
           Independently tested against 5 platforms
         </span>
 
-        <h1 class="type-display text-warm-black mb-5 md:mb-8">You built the demo.<br>Now <span class="text-forest">ship</span> the&nbsp;product.</h1>
-        <p class="type-h3 text-warm-mid mb-10 md:mb-14 max-w-[672px] mx-auto">AI agents build your software. Real developers make sure it works in production.<br><br>All in a matter of days, not&nbsp;months.</p>
+        <h1 class="type-display text-warm-black mb-5 md:mb-8">Bespoke business software launched in <span class="text-forest">days,</span> not&nbsp;months.</h1>
+        <p class="type-h3 text-warm-mid mb-10 md:mb-14 max-w-[672px] mx-auto">AI agents build your software. Real developers make sure it works in&nbsp;production.</p>
 
         <a href={calendarUrl} class="btn-primary">
           Book a demo <span aria-hidden="true">&rarr;</span>
@@ -167,14 +167,10 @@ const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/sched
   <section id="video" class="py-16 md:py-20 fade-in-section" aria-labelledby="video-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <h2 id="video-heading" class="type-h2 text-warm-black mb-10 text-center">Taking you from built to launched, one step at a&nbsp;time.</h2>
-      <div class="video-embed-placeholder">
-        <div class="video-embed-inner">
-          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <circle cx="32" cy="32" r="31" stroke="currentColor" stroke-width="2" opacity="0.2"/>
-            <polygon points="26,20 48,32 26,44" fill="currentColor" opacity="0.2"/>
-          </svg>
-          <p class="type-body text-stone mt-4">Product walkthrough video<br><span class="type-body-sm">Max 45 seconds &middot; Auto-play</span></p>
-        </div>
+      <div style="border-radius: var(--radius-container); overflow: hidden; border: 1.5px solid var(--color-warm-black);">
+        <video autoplay muted loop playsinline style="width: 100%; display: block;">
+          <source src="/images/AgentQ_FHD_1.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </section>
