@@ -65,6 +65,47 @@ const description = "AI agents build your software. Real developers make sure it
           Book a demo <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
+
+      <!-- Animated 3→1 process diagram -->
+      <div class="hero-process-diagram">
+        <div class="hero-process-nodes">
+          <div class="hero-node hero-node--step" style="--node-delay: 0.3s">
+            Describe your product
+          </div>
+          <div class="hero-node hero-node--step" style="--node-delay: 0.6s">
+            AI agents build it
+          </div>
+          <div class="hero-node hero-node--step" style="--node-delay: 0.9s">
+            Real developers step in
+          </div>
+        </div>
+
+        <!-- Connector lines (SVG) — tree structure with junction dots -->
+        <svg class="hero-connectors" viewBox="0 0 800 120" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <!-- Lines from step nodes down to junction points -->
+          <line class="hero-connector-line" x1="133" y1="0" x2="133" y2="40"/>
+          <line class="hero-connector-line" x1="400" y1="0" x2="400" y2="40"/>
+          <line class="hero-connector-line" x1="667" y1="0" x2="667" y2="40"/>
+
+          <!-- Lines from junctions converging to center -->
+          <line class="hero-connector-line" x1="133" y1="40" x2="400" y2="90"/>
+          <line class="hero-connector-line" x1="400" y1="40" x2="400" y2="90"/>
+          <line class="hero-connector-line" x1="667" y1="40" x2="400" y2="90"/>
+
+          <!-- Junction dots -->
+          <circle class="hero-connector-dot" cx="133" cy="40" r="3.5"/>
+          <circle class="hero-connector-dot" cx="400" cy="40" r="3.5"/>
+          <circle class="hero-connector-dot" cx="667" cy="40" r="3.5"/>
+
+          <!-- Center convergence dot -->
+          <circle class="hero-connector-dot hero-connector-dot--center" cx="400" cy="90" r="4.5"/>
+        </svg>
+
+        <!-- Final node -->
+        <div class="hero-node hero-node--final" style="--node-delay: 1.3s">
+          Launch your product
+        </div>
+      </div>
     </div>
   </section>
 
