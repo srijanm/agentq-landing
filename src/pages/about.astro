@@ -4,10 +4,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const calendarUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2VXsiZVbhgdnhV1tkQ9J6N-roCQlSd4CDDA5BHEcf36xdz-4OJSNM_56LSe5vDu9G6-AZRXkCj";
 
 const teamMembers = [
-  { name: "Founder Name", role: "Co-founder & CEO", bio: "PLACEHOLDER: Background, what drives them, why they started QwikBuild. 2-3 lines." },
-  { name: "Founder Name", role: "Co-founder & CTO", bio: "PLACEHOLDER: Technical background, what they built before, their approach to the product. 2-3 lines." },
-  { name: "Team Member", role: "Head of Engineering", bio: "PLACEHOLDER: Background, what they're responsible for, one human detail. 2-3 lines." },
-  { name: "Team Member", role: "Lead Dev Assist Engineer", bio: "PLACEHOLDER: Background, what they do day-to-day, one human detail. 2-3 lines." },
+  {
+    name: "Brij Singh",
+    role: "Co-Founder, GTM",
+    credential: "First Investor in",
+    companies: ["MediBuddy", "Public", "Inshorts", "Whatfix"],
+  },
+  {
+    name: "Nilesh Trivedi",
+    role: "Co-Founder, Engg.",
+    credential: "Engineering Leader at",
+    companies: ["Meta", "WhatsApp", "Clear", "Gupshup"],
+  },
+  {
+    name: "Pradeep Ayyagari",
+    role: "Co-Founder, Product",
+    credential: "Product Leader at",
+    companies: ["Slice", "Sixt", "Swiggy"],
+  },
 ];
 ---
 
@@ -16,7 +30,7 @@ const teamMembers = [
   <!-- ═══════════════════════════════════════════
        PAGE HEADER
        ═══════════════════════════════════════════ -->
-  <section class="pt-24 pb-12 md:pt-32 md:pb-16">
+  <section class="pt-24 pb-8 md:pt-28 md:pb-10">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <h1 class="type-display text-warm-black mb-4">The team behind&nbsp;AgentQ.</h1>
       <p class="type-h3 text-warm-mid max-w-[672px]">We build tools that turn ideas into production&nbsp;software.</p>
@@ -26,7 +40,7 @@ const teamMembers = [
   <!-- ═══════════════════════════════════════════
        SECTION 1: THE SHORT VERSION — Stats
        ═══════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 fade-in-section">
+  <section class="py-10 md:py-14 fade-in-section">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div class="card text-center">
@@ -50,9 +64,23 @@ const teamMembers = [
   </section>
 
   <!-- ═══════════════════════════════════════════
+       KEYNOTE VIDEO
+       ═══════════════════════════════════════════ -->
+  <section class="py-10 md:py-14 fade-in-section" aria-labelledby="keynote-heading">
+    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
+      <h2 id="keynote-heading" class="type-h2 text-warm-black mb-8 text-center">Watch the&nbsp;keynote.</h2>
+      <div style="border-radius: var(--radius-container); overflow: hidden; border: 1.5px solid var(--color-warm-black);">
+        <video controls playsinline style="width: 100%; display: block;">
+          <source src="/images/keynote.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        SECTION 2: THE FOUNDING STORY
        ═══════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="story-heading">
+  <section class="py-10 md:py-14 fade-in-section" aria-labelledby="story-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
       <h2 id="story-heading" class="type-h2 text-warm-black mb-8">Why we built&nbsp;this.</h2>
       <div class="max-w-[768px] space-y-4">
@@ -65,47 +93,30 @@ const teamMembers = [
   </section>
 
   <!-- ═══════════════════════════════════════════
-       SECTION 3: WHAT WE BELIEVE
+       SECTION 3: THE TEAM
        ═══════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="beliefs-heading">
+  <section class="py-10 md:py-14 fade-in-section" aria-labelledby="team-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <h2 id="beliefs-heading" class="type-h2 text-warm-black mb-10">How we think about building&nbsp;software.</h2>
+      <h2 id="team-heading" class="type-h2 text-warm-black mb-8">The people behind the&nbsp;platform.</h2>
 
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="card">
-          <h3 class="type-h4 mb-2">AI builds fast. Humans make sure it&nbsp;works.</h3>
-          <p class="type-body text-warm-mid">Speed matters. So does judgment. We pair both because neither alone is&nbsp;enough.</p>
-        </div>
-        <div class="card">
-          <h3 class="type-h4 mb-2">Production-ready is the starting&nbsp;point.</h3>
-          <p class="type-body text-warm-mid">A demo that breaks with real users helps nobody. Everything we ship is built to handle real customers with real&nbsp;data.</p>
-        </div>
-        <div class="card">
-          <h3 class="type-h4 mb-2">You should own what you&nbsp;build.</h3>
-          <p class="type-body text-warm-mid">Your code. Your database. Your infrastructure. Move it anywhere. Hand it to anyone. No&nbsp;lock-in.</p>
-        </div>
-        <div class="card">
-          <h3 class="type-h4 mb-2">Honesty over&nbsp;hype.</h3>
-          <p class="type-body text-warm-mid">We publish our evaluation scores, including the ones where we fall short. We'd rather earn trust than manufacture&nbsp;it.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       SECTION 4: THE TEAM
-       ═══════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="team-heading">
-    <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <h2 id="team-heading" class="type-h2 text-warm-black mb-10">The people behind the&nbsp;platform.</h2>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid sm:grid-cols-3 gap-6">
         {teamMembers.map((member) => (
-          <div class="card">
-            <div class="testimonial-photo-placeholder mb-4" style="width: 56px; height: 56px;"></div>
-            <h3 class="type-h4 mb-1">{member.name}</h3>
-            <p class="type-body-sm text-forest mb-3">{member.role}</p>
-            <p class="type-body-sm text-warm-mid">{member.bio}</p>
+          <div style="border: 1.5px solid var(--color-warm-black); border-radius: var(--radius-card); overflow: hidden;">
+            <!-- Photo area -->
+            <div style="height: 280px; background: var(--color-sage-surface); display: flex; align-items: center; justify-content: center;">
+              <span class="type-body-sm text-stone">Photo</span>
+            </div>
+            <!-- Info -->
+            <div style="padding: 24px;">
+              <h3 class="type-h3 text-warm-black mb-1">{member.name}</h3>
+              <p class="type-body text-forest mb-5">{member.role}</p>
+              <p class="type-overline text-stone mb-3">{member.credential}</p>
+              <div class="flex flex-wrap gap-2">
+                {member.companies.map((company: string) => (
+                  <span class="type-body font-medium text-warm-black" style="background: var(--color-sage-surface); border-radius: 8px; padding: 6px 14px;">{company}</span>
+                ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -115,9 +126,9 @@ const teamMembers = [
   <!-- ═══════════════════════════════════════════
        SECTION 5: BACKED BY
        ═══════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 fade-in-section" aria-labelledby="backed-heading">
+  <section class="py-10 md:py-14 fade-in-section" aria-labelledby="backed-heading">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10">
-      <h2 id="backed-heading" class="type-h2 text-warm-black mb-10">Backed by people who build&nbsp;things.</h2>
+      <h2 id="backed-heading" class="type-h2 text-warm-black mb-8">Backed by people who build&nbsp;things.</h2>
       <div class="image-placeholder" style="min-height: 120px;">
         <p class="type-body-sm text-stone">Investor/backer logos — add when ready</p>
       </div>
@@ -127,7 +138,7 @@ const teamMembers = [
   <!-- ═══════════════════════════════════════════
        SECTION 6: CTA
        ═══════════════════════════════════════════ -->
-  <section class="py-16 md:py-20 fade-in-section">
+  <section class="py-10 md:py-14 fade-in-section">
     <div class="max-w-[1280px] mx-auto px-5 md:px-10 text-center">
       <h2 class="type-h2 text-warm-black mb-4">We'd love to show you what we're&nbsp;building.</h2>
       <a href={calendarUrl} class="btn-primary text-lg mt-6">

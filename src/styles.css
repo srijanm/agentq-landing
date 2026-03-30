@@ -490,12 +490,18 @@ body {
   padding: 24px;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .testimonial-card:hover {
+  background: var(--color-forest);
   border-color: var(--color-forest);
-  box-shadow: 0 2px 12px rgba(0, 119, 69, 0.08);
+}
+
+.testimonial-card:hover blockquote,
+.testimonial-card:hover p {
+  color: var(--color-off-white);
+  transition: color 0.3s ease;
 }
 
 .testimonial-photo {
@@ -1215,6 +1221,16 @@ body {
   border: 1.5px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   padding: 24px 16px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.stat-card:hover {
+  background: var(--color-forest);
+}
+
+.stat-card:hover p {
+  color: var(--color-off-white);
+  transition: color 0.3s ease;
 }
 
 .card {
@@ -1222,6 +1238,44 @@ body {
   border: 1.5px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   padding: 24px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card:hover {
+  background: var(--color-forest);
+  color: var(--color-off-white);
+}
+
+.card:hover h3,
+.card:hover h4,
+.card:hover p,
+.card:hover span,
+.card:hover li span {
+  color: var(--color-off-white);
+  transition: color 0.3s ease;
+}
+
+.card:hover .text-forest {
+  color: var(--color-off-white);
+}
+
+/* Cards that are already green — invert to cream on hover */
+.card[style*="background: var(--color-forest)"],
+.card[style*="background-color: var(--color-forest)"] {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card[style*="background: var(--color-forest)"]:hover,
+.card[style*="background-color: var(--color-forest)"]:hover {
+  background: var(--color-sage-surface) !important;
+  color: var(--color-warm-black);
+}
+
+.card[style*="background: var(--color-forest)"]:hover h3,
+.card[style*="background: var(--color-forest)"]:hover h4,
+.card[style*="background: var(--color-forest)"]:hover p,
+.card[style*="background: var(--color-forest)"]:hover span {
+  color: var(--color-warm-black) !important;
 }
 
 .card-icon-area {
@@ -1238,6 +1292,18 @@ body {
   border: 1.5px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.problem-card:hover {
+  background: var(--color-forest);
+}
+
+.problem-card:hover h3,
+.problem-card:hover p,
+.problem-card:hover li {
+  color: var(--color-off-white);
+  transition: color 0.3s ease;
 }
 
 .problem-card-img {
@@ -1268,6 +1334,18 @@ body {
   border: 1.5px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.ships-card:hover {
+  background: var(--color-forest);
+}
+
+.ships-card:hover h3,
+.ships-card:hover p,
+.ships-card:hover strong {
+  color: var(--color-off-white);
+  transition: color 0.3s ease;
 }
 
 .ships-card-img {
@@ -1403,12 +1481,36 @@ body {
   border: 1.5px solid var(--color-warm-black);
   border-radius: var(--radius-card);
   padding: 24px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tier-card:hover {
+  background: var(--color-forest);
+  color: var(--color-off-white);
+}
+
+.tier-card:hover h3,
+.tier-card:hover p,
+.tier-card:hover span {
+  color: var(--color-off-white);
+  transition: color 0.3s ease;
 }
 
 .tier-card-featured {
   background: var(--color-warm-black);
   color: var(--color-off-white);
   border-color: var(--color-warm-black);
+}
+
+.tier-card-featured:hover {
+  background: var(--color-sage-surface);
+  color: var(--color-warm-black);
+}
+
+.tier-card-featured:hover h3,
+.tier-card-featured:hover p,
+.tier-card-featured:hover span {
+  color: var(--color-warm-black);
 }
 
 /* ═══════════════════════════════════════════
